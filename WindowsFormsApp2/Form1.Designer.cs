@@ -107,7 +107,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBoxLubraryBookType = new System.Windows.Forms.ComboBox();
             this.представлениеБиблиотекаТипыКнигBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxLibraryBookStorage = new System.Windows.Forms.ComboBox();
             this.представлениеБиблиотекаМестаХраненияBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -172,6 +171,7 @@
             this.представлениеБиблиотекаКнигиTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаКнигиTableAdapter();
             this.представлениеБиблиотекаМестаХраненияTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаМестаХраненияTableAdapter();
             this.представлениеБиблиотекаТипыКнигTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаТипыКнигTableAdapter();
+            this.comboBoxLubraryBookType = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеОстатки_на_складахDataGridView)).BeginInit();
@@ -894,12 +894,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.comboBoxLubraryBookType);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.comboBoxLubraryBookType);
             this.panel1.Controls.Add(this.comboBoxLibraryBookStorage);
             this.panel1.Controls.Add(this.dateTimePickerLibraryBook);
             this.panel1.Controls.Add(this.textBoxLibraryBookAuthor);
@@ -954,18 +954,6 @@
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Название";
-            // 
-            // comboBoxLubraryBookType
-            // 
-            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеБиблиотекаКнигиBindingSource, "id_типа_книги", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаКнигиBindingSource, "название_типа", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboBoxLubraryBookType.DataSource = this.представлениеБиблиотекаТипыКнигBindingSource;
-            this.comboBoxLubraryBookType.DisplayMember = "название_типа";
-            this.comboBoxLubraryBookType.FormattingEnabled = true;
-            this.comboBoxLubraryBookType.Location = new System.Drawing.Point(14, 183);
-            this.comboBoxLubraryBookType.Name = "comboBoxLubraryBookType";
-            this.comboBoxLubraryBookType.Size = new System.Drawing.Size(183, 21);
-            this.comboBoxLubraryBookType.TabIndex = 4;
             // 
             // представлениеБиблиотекаТипыКнигBindingSource
             // 
@@ -1526,6 +1514,18 @@
             // 
             this.представлениеБиблиотекаТипыКнигTableAdapter.ClearBeforeFill = true;
             // 
+            // comboBoxLubraryBookType
+            // 
+            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеБиблиотекаКнигиBindingSource, "id_типа_книги", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаКнигиBindingSource, "название_типа", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboBoxLubraryBookType.DataSource = this.представлениеБиблиотекаТипыКнигBindingSource;
+            this.comboBoxLubraryBookType.DisplayMember = "название_типа";
+            this.comboBoxLubraryBookType.FormattingEnabled = true;
+            this.comboBoxLubraryBookType.Location = new System.Drawing.Point(17, 183);
+            this.comboBoxLubraryBookType.Name = "comboBoxLubraryBookType";
+            this.comboBoxLubraryBookType.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxLubraryBookType.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1699,7 +1699,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBoxLubraryBookType;
         private System.Windows.Forms.ComboBox comboBoxLibraryBookStorage;
         private System.Windows.Forms.DateTimePicker dateTimePickerLibraryBook;
         private System.Windows.Forms.TextBox textBoxLibraryBookAuthor;
@@ -1736,6 +1735,7 @@
         private inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаТипыКнигTableAdapter представлениеБиблиотекаТипыКнигTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодтипакнигDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn названиетипаDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.ComboBox comboBoxLubraryBookType;
     }
 }
 

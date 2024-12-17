@@ -62,11 +62,33 @@ namespace WindowsFormsApp2
 
         private void toolStripButtonLibraryBookUpdate_Click(object sender, EventArgs e)
         {
+            String name = this.textBoxBookLibraryName.Text;
+            String author = this.textBoxLibraryBookAuthor.Text;
+            DateTime date = Convert.ToDateTime(this.dateTimePickerLibraryBook.Text);
+            System.Data.DataRowView storage = (System.Data.DataRowView)this.comboBoxLibraryBookStorage.SelectedValue;
+            Int32 id_storage = Convert.ToInt32(storage.Row[0]);
+            System.Data.DataRowView bookType = (System.Data.DataRowView)this.comboBoxLubraryBookType.SelectedValue;
+            Int32 id_book_type = Convert.ToInt32(bookType.Row[0]);
 
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView) представлениеБиблиотекаКнигиBindingSource.Current;
+            id = (int)drv["код_книги"];
+            queriesTableAdapter.UpdateLibraryBook(id, name, author, date, id_book_type, id_storage);
+            this.представлениеБиблиотекаКнигиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаКниги);
         }
 
         private void toolStripButtonLibraryBookDelete_Click(object sender, EventArgs e)
         {
+            DataRowView drv;
+            int i = представлениеБиблиотекаКнигиBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView) представлениеБиблиотекаКнигиBindingSource.Current;
+                int id = (int)drv["код_книги"];
+                queriesTableAdapter.DeleteLibraryBook(id);
+                this.представлениеБиблиотекаКнигиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаКниги);
+            }
 
         }
     }
