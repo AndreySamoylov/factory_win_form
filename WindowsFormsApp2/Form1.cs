@@ -89,7 +89,76 @@ namespace WindowsFormsApp2
                 queriesTableAdapter.DeleteLibraryBook(id);
                 this.представлениеБиблиотекаКнигиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаКниги);
             }
+        }
 
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            String name = this.textBox_book_storage.Text;
+
+            queriesTableAdapter.CreateLibraryStorage(name);
+            this.представлениеБиблиотекаМестаХраненияTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаМестаХранения);
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            String name = this.textBox_book_storage.Text;
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеБиблиотекаМестаХраненияBindingSource.Current;
+            id = (int)drv["код_места_хранения"];
+            queriesTableAdapter.UpdateLibraryStorage(id, name);
+
+            this.представлениеБиблиотекаМестаХраненияTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаМестаХранения);
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеБиблиотекаМестаХраненияBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеБиблиотекаМестаХраненияBindingSource.Current;
+                int id = (int)drv["код_места_хранения"];
+                queriesTableAdapter.DeleteLibraryStorage(id);
+                this.представлениеБиблиотекаМестаХраненияTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаМестаХранения);
+            }
+        }
+
+        private void toolStripButton4_Click(object sender, EventArgs e)
+        {
+            String name = this.textBox_book_type.Text;
+
+            queriesTableAdapter.CreateLibraryBookType(name);
+            this.представлениеБиблиотекаТипыКнигTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаТипыКниг);
+        }
+
+        private void toolStripButton5_Click(object sender, EventArgs e)
+        {
+            String name = this.textBox_book_type.Text;
+
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеБиблиотекаТипыКнигBindingSource.Current;
+            id = (int)drv["код_типа_книг"];
+            queriesTableAdapter.UpdateLibraryBookType(id, name);
+
+            this.представлениеБиблиотекаТипыКнигTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаТипыКниг);
+
+        }
+
+        private void toolStripButton6_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеБиблиотекаТипыКнигBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеБиблиотекаТипыКнигBindingSource.Current;
+                int id = (int)drv["код_типа_книг"];
+                queriesTableAdapter.DeleteLibraryBookType(id);
+                this.представлениеБиблиотекаТипыКнигTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеБиблиотекаТипыКниг);
+            }
         }
     }
 }

@@ -92,22 +92,15 @@
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.кодкнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиекнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.авторкнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.годизданияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idтипакнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idместахраненияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеместаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиетипаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.представлениеБиблиотекаКнигиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxLubraryBookType = new System.Windows.Forms.ComboBox();
+            this.представлениеБиблиотекаТипыКнигBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.представлениеБиблиотекаТипыКнигBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxLibraryBookStorage = new System.Windows.Forms.ComboBox();
             this.представлениеБиблиотекаМестаХраненияBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dateTimePickerLibraryBook = new System.Windows.Forms.DateTimePicker();
@@ -128,8 +121,6 @@
             this.toolStripButtonLibraryBookDelete = new System.Windows.Forms.ToolStripButton();
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.кодместахраненияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеместаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
@@ -143,8 +134,6 @@
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.кодтипакнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиетипаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem2 = new System.Windows.Forms.ToolStripLabel();
@@ -171,7 +160,26 @@
             this.представлениеБиблиотекаКнигиTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаКнигиTableAdapter();
             this.представлениеБиблиотекаМестаХраненияTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаМестаХраненияTableAdapter();
             this.представлениеБиблиотекаТипыКнигTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаТипыКнигTableAdapter();
-            this.comboBoxLubraryBookType = new System.Windows.Forms.ComboBox();
+            this.textBox_book_storage = new System.Windows.Forms.TextBox();
+            this.textBox_book_type = new System.Windows.Forms.TextBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.кодкнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиекнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.авторкнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.годизданияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idтипакнигиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idместахраненияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеместаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиетипаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодместахраненияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиеместаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодтипакнигDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.названиетипаDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеОстатки_на_складахDataGridView)).BeginInit();
@@ -205,10 +213,12 @@
             this.bindingNavigatorLibraryBook.SuspendLayout();
             this.tabPage9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             this.tabPage10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
             this.SuspendLayout();
@@ -839,54 +849,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(895, 362);
             this.dataGridView1.TabIndex = 2;
             // 
-            // кодкнигиDataGridViewTextBoxColumn
-            // 
-            this.кодкнигиDataGridViewTextBoxColumn.DataPropertyName = "код_книги";
-            this.кодкнигиDataGridViewTextBoxColumn.HeaderText = "код_книги";
-            this.кодкнигиDataGridViewTextBoxColumn.Name = "кодкнигиDataGridViewTextBoxColumn";
-            // 
-            // названиекнигиDataGridViewTextBoxColumn
-            // 
-            this.названиекнигиDataGridViewTextBoxColumn.DataPropertyName = "название_книги";
-            this.названиекнигиDataGridViewTextBoxColumn.HeaderText = "название_книги";
-            this.названиекнигиDataGridViewTextBoxColumn.Name = "названиекнигиDataGridViewTextBoxColumn";
-            // 
-            // авторкнигиDataGridViewTextBoxColumn
-            // 
-            this.авторкнигиDataGridViewTextBoxColumn.DataPropertyName = "автор_книги";
-            this.авторкнигиDataGridViewTextBoxColumn.HeaderText = "автор_книги";
-            this.авторкнигиDataGridViewTextBoxColumn.Name = "авторкнигиDataGridViewTextBoxColumn";
-            // 
-            // годизданияDataGridViewTextBoxColumn
-            // 
-            this.годизданияDataGridViewTextBoxColumn.DataPropertyName = "год_издания";
-            this.годизданияDataGridViewTextBoxColumn.HeaderText = "год_издания";
-            this.годизданияDataGridViewTextBoxColumn.Name = "годизданияDataGridViewTextBoxColumn";
-            // 
-            // idтипакнигиDataGridViewTextBoxColumn
-            // 
-            this.idтипакнигиDataGridViewTextBoxColumn.DataPropertyName = "id_типа_книги";
-            this.idтипакнигиDataGridViewTextBoxColumn.HeaderText = "id_типа_книги";
-            this.idтипакнигиDataGridViewTextBoxColumn.Name = "idтипакнигиDataGridViewTextBoxColumn";
-            // 
-            // idместахраненияDataGridViewTextBoxColumn
-            // 
-            this.idместахраненияDataGridViewTextBoxColumn.DataPropertyName = "id_места_хранения";
-            this.idместахраненияDataGridViewTextBoxColumn.HeaderText = "id_места_хранения";
-            this.idместахраненияDataGridViewTextBoxColumn.Name = "idместахраненияDataGridViewTextBoxColumn";
-            // 
-            // названиеместаDataGridViewTextBoxColumn
-            // 
-            this.названиеместаDataGridViewTextBoxColumn.DataPropertyName = "название_места";
-            this.названиеместаDataGridViewTextBoxColumn.HeaderText = "название_места";
-            this.названиеместаDataGridViewTextBoxColumn.Name = "названиеместаDataGridViewTextBoxColumn";
-            // 
-            // названиетипаDataGridViewTextBoxColumn
-            // 
-            this.названиетипаDataGridViewTextBoxColumn.DataPropertyName = "название_типа";
-            this.названиетипаDataGridViewTextBoxColumn.HeaderText = "название_типа";
-            this.названиетипаDataGridViewTextBoxColumn.Name = "названиетипаDataGridViewTextBoxColumn";
-            // 
             // представлениеБиблиотекаКнигиBindingSource
             // 
             this.представлениеБиблиотекаКнигиBindingSource.DataMember = "ПредставлениеБиблиотекаКниги";
@@ -909,6 +871,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(215, 362);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBoxLubraryBookType
+            // 
+            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеБиблиотекаКнигиBindingSource, "id_типа_книги", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаКнигиBindingSource, "название_типа", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.comboBoxLubraryBookType.DataSource = this.представлениеБиблиотекаТипыКнигBindingSource;
+            this.comboBoxLubraryBookType.DisplayMember = "название_типа";
+            this.comboBoxLubraryBookType.FormattingEnabled = true;
+            this.comboBoxLubraryBookType.Location = new System.Drawing.Point(17, 183);
+            this.comboBoxLubraryBookType.Name = "comboBoxLubraryBookType";
+            this.comboBoxLubraryBookType.Size = new System.Drawing.Size(180, 21);
+            this.comboBoxLubraryBookType.TabIndex = 10;
+            // 
+            // представлениеБиблиотекаТипыКнигBindingSource
+            // 
+            this.представлениеБиблиотекаТипыКнигBindingSource.DataMember = "ПредставлениеБиблиотекаТипыКниг";
+            this.представлениеБиблиотекаТипыКнигBindingSource.DataSource = this.inform_system_baseDataSet;
             // 
             // label14
             // 
@@ -954,11 +933,6 @@
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 5;
             this.label7.Text = "Название";
-            // 
-            // представлениеБиблиотекаТипыКнигBindingSource
-            // 
-            this.представлениеБиблиотекаТипыКнигBindingSource.DataMember = "ПредставлениеБиблиотекаТипыКниг";
-            this.представлениеБиблиотекаТипыКнигBindingSource.DataSource = this.inform_system_baseDataSet;
             // 
             // comboBoxLibraryBookStorage
             // 
@@ -1154,21 +1128,9 @@
             this.dataGridView2.Size = new System.Drawing.Size(910, 362);
             this.dataGridView2.TabIndex = 2;
             // 
-            // кодместахраненияDataGridViewTextBoxColumn
-            // 
-            this.кодместахраненияDataGridViewTextBoxColumn.DataPropertyName = "код_места_хранения";
-            this.кодместахраненияDataGridViewTextBoxColumn.HeaderText = "код_места_хранения";
-            this.кодместахраненияDataGridViewTextBoxColumn.Name = "кодместахраненияDataGridViewTextBoxColumn";
-            this.кодместахраненияDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // названиеместаDataGridViewTextBoxColumn1
-            // 
-            this.названиеместаDataGridViewTextBoxColumn1.DataPropertyName = "название_места";
-            this.названиеместаDataGridViewTextBoxColumn1.HeaderText = "название_места";
-            this.названиеместаDataGridViewTextBoxColumn1.Name = "названиеместаDataGridViewTextBoxColumn1";
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.textBox_book_storage);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 28);
             this.panel2.Name = "panel2";
@@ -1190,7 +1152,10 @@
             this.bindingNavigatorSeparator4,
             this.bindingNavigatorMoveNextItem1,
             this.bindingNavigatorMoveLastItem1,
-            this.bindingNavigatorSeparator5});
+            this.bindingNavigatorSeparator5,
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripButton3});
             this.bindingNavigator1.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem1;
@@ -1297,21 +1262,9 @@
             this.dataGridView3.Size = new System.Drawing.Size(910, 362);
             this.dataGridView3.TabIndex = 2;
             // 
-            // кодтипакнигDataGridViewTextBoxColumn
-            // 
-            this.кодтипакнигDataGridViewTextBoxColumn.DataPropertyName = "код_типа_книг";
-            this.кодтипакнигDataGridViewTextBoxColumn.HeaderText = "код_типа_книг";
-            this.кодтипакнигDataGridViewTextBoxColumn.Name = "кодтипакнигDataGridViewTextBoxColumn";
-            this.кодтипакнигDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // названиетипаDataGridViewTextBoxColumn1
-            // 
-            this.названиетипаDataGridViewTextBoxColumn1.DataPropertyName = "название_типа";
-            this.названиетипаDataGridViewTextBoxColumn1.HeaderText = "название_типа";
-            this.названиетипаDataGridViewTextBoxColumn1.Name = "названиетипаDataGridViewTextBoxColumn1";
-            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBox_book_type);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(3, 28);
             this.panel3.Name = "panel3";
@@ -1333,7 +1286,10 @@
             this.bindingNavigatorSeparator7,
             this.bindingNavigatorMoveNextItem2,
             this.bindingNavigatorMoveLastItem2,
-            this.bindingNavigatorSeparator8});
+            this.bindingNavigatorSeparator8,
+            this.toolStripButton4,
+            this.toolStripButton5,
+            this.toolStripButton6});
             this.bindingNavigator2.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator2.MoveFirstItem = this.bindingNavigatorMoveFirstItem2;
             this.bindingNavigator2.MoveLastItem = this.bindingNavigatorMoveLastItem2;
@@ -1514,17 +1470,154 @@
             // 
             this.представлениеБиблиотекаТипыКнигTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBoxLubraryBookType
+            // textBox_book_storage
             // 
-            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеБиблиотекаКнигиBindingSource, "id_типа_книги", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboBoxLubraryBookType.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаКнигиBindingSource, "название_типа", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.comboBoxLubraryBookType.DataSource = this.представлениеБиблиотекаТипыКнигBindingSource;
-            this.comboBoxLubraryBookType.DisplayMember = "название_типа";
-            this.comboBoxLubraryBookType.FormattingEnabled = true;
-            this.comboBoxLubraryBookType.Location = new System.Drawing.Point(17, 183);
-            this.comboBoxLubraryBookType.Name = "comboBoxLubraryBookType";
-            this.comboBoxLubraryBookType.Size = new System.Drawing.Size(180, 21);
-            this.comboBoxLubraryBookType.TabIndex = 10;
+            this.textBox_book_storage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаМестаХраненияBindingSource, "название_места", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_book_storage.Location = new System.Drawing.Point(13, 16);
+            this.textBox_book_storage.Name = "textBox_book_storage";
+            this.textBox_book_storage.Size = new System.Drawing.Size(173, 20);
+            this.textBox_book_storage.TabIndex = 0;
+            // 
+            // textBox_book_type
+            // 
+            this.textBox_book_type.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеБиблиотекаТипыКнигBindingSource, "название_типа", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.textBox_book_type.Location = new System.Drawing.Point(14, 18);
+            this.textBox_book_type.Name = "textBox_book_type";
+            this.textBox_book_type.Size = new System.Drawing.Size(171, 20);
+            this.textBox_book_type.TabIndex = 0;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(79, 22);
+            this.toolStripButton1.Text = "Добавить";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(81, 22);
+            this.toolStripButton2.Text = "Изменить";
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton3.Text = "Удалить";
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // кодкнигиDataGridViewTextBoxColumn
+            // 
+            this.кодкнигиDataGridViewTextBoxColumn.DataPropertyName = "код_книги";
+            this.кодкнигиDataGridViewTextBoxColumn.HeaderText = "код_книги";
+            this.кодкнигиDataGridViewTextBoxColumn.Name = "кодкнигиDataGridViewTextBoxColumn";
+            this.кодкнигиDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // названиекнигиDataGridViewTextBoxColumn
+            // 
+            this.названиекнигиDataGridViewTextBoxColumn.DataPropertyName = "название_книги";
+            this.названиекнигиDataGridViewTextBoxColumn.HeaderText = "Название книги";
+            this.названиекнигиDataGridViewTextBoxColumn.Name = "названиекнигиDataGridViewTextBoxColumn";
+            // 
+            // авторкнигиDataGridViewTextBoxColumn
+            // 
+            this.авторкнигиDataGridViewTextBoxColumn.DataPropertyName = "автор_книги";
+            this.авторкнигиDataGridViewTextBoxColumn.HeaderText = "Автор книги";
+            this.авторкнигиDataGridViewTextBoxColumn.Name = "авторкнигиDataGridViewTextBoxColumn";
+            // 
+            // годизданияDataGridViewTextBoxColumn
+            // 
+            this.годизданияDataGridViewTextBoxColumn.DataPropertyName = "год_издания";
+            this.годизданияDataGridViewTextBoxColumn.HeaderText = "Дата издания";
+            this.годизданияDataGridViewTextBoxColumn.Name = "годизданияDataGridViewTextBoxColumn";
+            // 
+            // idтипакнигиDataGridViewTextBoxColumn
+            // 
+            this.idтипакнигиDataGridViewTextBoxColumn.DataPropertyName = "id_типа_книги";
+            this.idтипакнигиDataGridViewTextBoxColumn.HeaderText = "id_типа_книги";
+            this.idтипакнигиDataGridViewTextBoxColumn.Name = "idтипакнигиDataGridViewTextBoxColumn";
+            this.idтипакнигиDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // idместахраненияDataGridViewTextBoxColumn
+            // 
+            this.idместахраненияDataGridViewTextBoxColumn.DataPropertyName = "id_места_хранения";
+            this.idместахраненияDataGridViewTextBoxColumn.HeaderText = "id_места_хранения";
+            this.idместахраненияDataGridViewTextBoxColumn.Name = "idместахраненияDataGridViewTextBoxColumn";
+            this.idместахраненияDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // названиеместаDataGridViewTextBoxColumn
+            // 
+            this.названиеместаDataGridViewTextBoxColumn.DataPropertyName = "название_места";
+            this.названиеместаDataGridViewTextBoxColumn.HeaderText = "Место хранения";
+            this.названиеместаDataGridViewTextBoxColumn.Name = "названиеместаDataGridViewTextBoxColumn";
+            // 
+            // названиетипаDataGridViewTextBoxColumn
+            // 
+            this.названиетипаDataGridViewTextBoxColumn.DataPropertyName = "название_типа";
+            this.названиетипаDataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.названиетипаDataGridViewTextBoxColumn.Name = "названиетипаDataGridViewTextBoxColumn";
+            // 
+            // кодместахраненияDataGridViewTextBoxColumn
+            // 
+            this.кодместахраненияDataGridViewTextBoxColumn.DataPropertyName = "код_места_хранения";
+            this.кодместахраненияDataGridViewTextBoxColumn.HeaderText = "код_места_хранения";
+            this.кодместахраненияDataGridViewTextBoxColumn.Name = "кодместахраненияDataGridViewTextBoxColumn";
+            this.кодместахраненияDataGridViewTextBoxColumn.ReadOnly = true;
+            this.кодместахраненияDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // названиеместаDataGridViewTextBoxColumn1
+            // 
+            this.названиеместаDataGridViewTextBoxColumn1.DataPropertyName = "название_места";
+            this.названиеместаDataGridViewTextBoxColumn1.HeaderText = "Название места";
+            this.названиеместаDataGridViewTextBoxColumn1.Name = "названиеместаDataGridViewTextBoxColumn1";
+            // 
+            // кодтипакнигDataGridViewTextBoxColumn
+            // 
+            this.кодтипакнигDataGridViewTextBoxColumn.DataPropertyName = "код_типа_книг";
+            this.кодтипакнигDataGridViewTextBoxColumn.HeaderText = "код_типа_книг";
+            this.кодтипакнигDataGridViewTextBoxColumn.Name = "кодтипакнигDataGridViewTextBoxColumn";
+            this.кодтипакнигDataGridViewTextBoxColumn.ReadOnly = true;
+            this.кодтипакнигDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // названиетипаDataGridViewTextBoxColumn1
+            // 
+            this.названиетипаDataGridViewTextBoxColumn1.DataPropertyName = "название_типа";
+            this.названиетипаDataGridViewTextBoxColumn1.HeaderText = "Название типа";
+            this.названиетипаDataGridViewTextBoxColumn1.Name = "названиетипаDataGridViewTextBoxColumn1";
+            // 
+            // toolStripButton4
+            // 
+            this.toolStripButton4.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton4.Image")));
+            this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton4.Name = "toolStripButton4";
+            this.toolStripButton4.Size = new System.Drawing.Size(79, 22);
+            this.toolStripButton4.Text = "Добавить";
+            this.toolStripButton4.Click += new System.EventHandler(this.toolStripButton4_Click);
+            // 
+            // toolStripButton5
+            // 
+            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
+            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton5.Name = "toolStripButton5";
+            this.toolStripButton5.Size = new System.Drawing.Size(81, 22);
+            this.toolStripButton5.Text = "Изменить";
+            this.toolStripButton5.Click += new System.EventHandler(this.toolStripButton5_Click);
+            // 
+            // toolStripButton6
+            // 
+            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
+            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton6.Name = "toolStripButton6";
+            this.toolStripButton6.Size = new System.Drawing.Size(71, 22);
+            this.toolStripButton6.Text = "Удалить";
+            this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
             // 
             // Form1
             // 
@@ -1579,12 +1672,16 @@
             this.tabPage9.ResumeLayout(false);
             this.tabPage9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             this.tabPage10.ResumeLayout(false);
             this.tabPage10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
@@ -1686,14 +1783,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonLibraryBookDelete;
         private System.Windows.Forms.BindingSource представлениеБиблиотекаКнигиBindingSource;
         private inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаКнигиTableAdapter представлениеБиблиотекаКнигиTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодкнигиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn названиекнигиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn авторкнигиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn годизданияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idтипакнигиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idместахраненияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn названиеместаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn названиетипаDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
@@ -1717,8 +1806,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
         private System.Windows.Forms.BindingSource представлениеБиблиотекаМестаХраненияBindingSource;
         private inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаМестаХраненияTableAdapter представлениеБиблиотекаМестаХраненияTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодместахраненияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn названиеместаDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.BindingNavigator bindingNavigator2;
@@ -1733,9 +1820,27 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator8;
         private System.Windows.Forms.BindingSource представлениеБиблиотекаТипыКнигBindingSource;
         private inform_system_baseDataSetTableAdapters.ПредставлениеБиблиотекаТипыКнигTableAdapter представлениеБиблиотекаТипыКнигTableAdapter;
+        private System.Windows.Forms.ComboBox comboBoxLubraryBookType;
+        private System.Windows.Forms.TextBox textBox_book_storage;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.TextBox textBox_book_type;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодкнигиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиекнигиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn авторкнигиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn годизданияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idтипакнигиDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idместахраненияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиеместаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиетипаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn кодместахраненияDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn названиеместаDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодтипакнигDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn названиетипаDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.ComboBox comboBoxLubraryBookType;
+        private System.Windows.Forms.ToolStripButton toolStripButton4;
+        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripButton toolStripButton6;
     }
 }
 
