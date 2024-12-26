@@ -53,6 +53,7 @@
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton11 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton23 = new System.Windows.Forms.ToolStripButton();
             this.label3 = new System.Windows.Forms.Label();
             this.dateTimePickerComplaint = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -81,6 +82,7 @@
             this.toolStripButton12 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton13 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton14 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton22 = new System.Windows.Forms.ToolStripButton();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
@@ -149,7 +151,17 @@
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton18 = new System.Windows.Forms.ToolStripButton();
             this.представлениеКонтрагентыDataGridView = new System.Windows.Forms.DataGridView();
+            this.кодDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.иННDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.представлениеЗакупкиBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.comboBoxname_product = new System.Windows.Forms.ComboBox();
+            this.comboBoxname_contractor = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -157,7 +169,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.bindingNavigator7 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.представлениеЗакупкиBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem7 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem7 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem7 = new System.Windows.Forms.ToolStripButton();
@@ -172,6 +183,15 @@
             this.toolStripButton21 = new System.Windows.Forms.ToolStripButton();
             this.label25 = new System.Windows.Forms.Label();
             this.представлениеЗакупкиDataGridView = new System.Windows.Forms.DataGridView();
+            this.Код = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.наименованиеТовараDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодтовараDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.кодконтрагентаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.датазакупкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.представлениеТоварыDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -297,24 +317,9 @@
             this.складыTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.СкладыTableAdapter();
             this.представлениеТоварыTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеТоварыTableAdapter();
             this.представлениеСкладыTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеСкладыTableAdapter();
-            this.comboBoxname_contractor = new System.Windows.Forms.ComboBox();
-            this.comboBoxname_product = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.Код = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.наименованиеТовараDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.количествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодтовараDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодконтрагентаDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датазакупкиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.наименованиеDataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.иННDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolStripButton24 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton25 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton26 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl3.SuspendLayout();
@@ -344,9 +349,9 @@
             this.bindingNavigator6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеКонтрагентыDataGridView)).BeginInit();
             this.tabPage15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).BeginInit();
             this.bindingNavigator7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиDataGridView)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеТоварыDataGridView)).BeginInit();
@@ -509,7 +514,8 @@
             this.bindingNavigatorSeparator11,
             this.toolStripButton7,
             this.toolStripButton10,
-            this.toolStripButton11});
+            this.toolStripButton11,
+            this.toolStripButton23});
             this.bindingNavigator3.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator3.MoveFirstItem = this.bindingNavigatorMoveFirstItem3;
             this.bindingNavigator3.MoveLastItem = this.bindingNavigatorMoveLastItem3;
@@ -619,6 +625,16 @@
             this.toolStripButton11.Text = "toolStripButton11";
             this.toolStripButton11.Click += new System.EventHandler(this.toolStripButton11_Click);
             // 
+            // toolStripButton23
+            // 
+            this.toolStripButton23.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton23.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton23.Image")));
+            this.toolStripButton23.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton23.Name = "toolStripButton23";
+            this.toolStripButton23.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton23.Text = "toolStripButton23";
+            this.toolStripButton23.Click += new System.EventHandler(this.toolStripButton23_Click);
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -685,6 +701,7 @@
             this.представлениеЖалобы_от_клиентовDataGridView.RowTemplate.Height = 24;
             this.представлениеЖалобы_от_клиентовDataGridView.Size = new System.Drawing.Size(784, 181);
             this.представлениеЖалобы_от_клиентовDataGridView.TabIndex = 7;
+            this.представлениеЖалобы_от_клиентовDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.представлениеЖалобы_от_клиентовDataGridView_CellContentClick);
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -791,7 +808,8 @@
             this.bindingNavigatorSeparator14,
             this.toolStripButton12,
             this.toolStripButton13,
-            this.toolStripButton14});
+            this.toolStripButton14,
+            this.toolStripButton22});
             this.bindingNavigator4.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator4.MoveFirstItem = this.bindingNavigatorMoveFirstItem4;
             this.bindingNavigator4.MoveLastItem = this.bindingNavigatorMoveLastItem4;
@@ -901,6 +919,16 @@
             this.toolStripButton14.Text = "toolStripButton14";
             this.toolStripButton14.Click += new System.EventHandler(this.toolStripButton14_Click);
             // 
+            // toolStripButton22
+            // 
+            this.toolStripButton22.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton22.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton22.Image")));
+            this.toolStripButton22.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton22.Name = "toolStripButton22";
+            this.toolStripButton22.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton22.Text = "toolStripButton22";
+            this.toolStripButton22.Click += new System.EventHandler(this.toolStripButton22_Click_1);
+            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -964,6 +992,7 @@
             this.представлениеДоговоры_с_контрагентамиDataGridView.RowTemplate.Height = 24;
             this.представлениеДоговоры_с_контрагентамиDataGridView.Size = new System.Drawing.Size(784, 220);
             this.представлениеДоговоры_с_контрагентамиDataGridView.TabIndex = 7;
+            this.представлениеДоговоры_с_контрагентамиDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.представлениеДоговоры_с_контрагентамиDataGridView_CellContentClick);
             // 
             // номердоговораDataGridViewTextBoxColumn
             // 
@@ -1086,7 +1115,8 @@
             this.bindingNavigatorSeparator17,
             this.toolStripButton8,
             this.toolStripButton15,
-            this.toolStripButton16});
+            this.toolStripButton16,
+            this.toolStripButton24});
             this.bindingNavigator5.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator5.MoveFirstItem = this.bindingNavigatorMoveFirstItem5;
             this.bindingNavigator5.MoveLastItem = this.bindingNavigatorMoveLastItem5;
@@ -1250,6 +1280,7 @@
             this.представлениеОстатки_на_складахDataGridView.RowTemplate.Height = 24;
             this.представлениеОстатки_на_складахDataGridView.Size = new System.Drawing.Size(624, 220);
             this.представлениеОстатки_на_складахDataGridView.TabIndex = 7;
+            this.представлениеОстатки_на_складахDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.представлениеОстатки_на_складахDataGridView_CellContentClick);
             // 
             // наименованиеСкладаDataGridViewTextBoxColumn
             // 
@@ -1452,7 +1483,8 @@
             this.bindingNavigatorSeparator20,
             this.toolStripButton9,
             this.toolStripButton17,
-            this.toolStripButton18});
+            this.toolStripButton18,
+            this.toolStripButton25});
             this.bindingNavigator6.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator6.MoveFirstItem = this.bindingNavigatorMoveFirstItem6;
             this.bindingNavigator6.MoveLastItem = this.bindingNavigatorMoveLastItem6;
@@ -1581,6 +1613,57 @@
             this.представлениеКонтрагентыDataGridView.RowTemplate.Height = 24;
             this.представлениеКонтрагентыDataGridView.Size = new System.Drawing.Size(985, 220);
             this.представлениеКонтрагентыDataGridView.TabIndex = 3;
+            this.представлениеКонтрагентыDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.представлениеКонтрагентыDataGridView_CellContentClick);
+            // 
+            // кодDataGridViewTextBoxColumn4
+            // 
+            this.кодDataGridViewTextBoxColumn4.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn4.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.кодDataGridViewTextBoxColumn4.Name = "кодDataGridViewTextBoxColumn4";
+            this.кодDataGridViewTextBoxColumn4.ReadOnly = true;
+            this.кодDataGridViewTextBoxColumn4.Visible = false;
+            this.кодDataGridViewTextBoxColumn4.Width = 50;
+            // 
+            // наименованиеDataGridViewTextBoxColumn4
+            // 
+            this.наименованиеDataGridViewTextBoxColumn4.DataPropertyName = "Наименование";
+            this.наименованиеDataGridViewTextBoxColumn4.HeaderText = "Наименование";
+            this.наименованиеDataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.наименованиеDataGridViewTextBoxColumn4.Name = "наименованиеDataGridViewTextBoxColumn4";
+            this.наименованиеDataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // иННDataGridViewTextBoxColumn
+            // 
+            this.иННDataGridViewTextBoxColumn.DataPropertyName = "ИНН";
+            this.иННDataGridViewTextBoxColumn.HeaderText = "ИНН";
+            this.иННDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.иННDataGridViewTextBoxColumn.Name = "иННDataGridViewTextBoxColumn";
+            this.иННDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // телефонDataGridViewTextBoxColumn
+            // 
+            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
+            this.телефонDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
+            this.телефонDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // адресDataGridViewTextBoxColumn
+            // 
+            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
+            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.адресDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.адресDataGridViewTextBoxColumn.Width = 125;
             // 
             // tabPage15
             // 
@@ -1603,6 +1686,46 @@
             this.tabPage15.TabIndex = 1;
             this.tabPage15.Text = "Закупки";
             this.tabPage15.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
+            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
+            this.dateTimePicker1.Location = new System.Drawing.Point(973, 241);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(189, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            // 
+            // представлениеЗакупкиBindingSource
+            // 
+            this.представлениеЗакупкиBindingSource.DataMember = "ПредставлениеЗакупки";
+            this.представлениеЗакупкиBindingSource.DataSource = this.inform_system_baseDataSet;
+            // 
+            // comboBoxname_product
+            // 
+            this.comboBoxname_product.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеЗакупкиBindingSource, "Код_товара", true));
+            this.comboBoxname_product.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Наименование товара", true));
+            this.comboBoxname_product.DataSource = this.представлениеТоварыBindingSource;
+            this.comboBoxname_product.DisplayMember = "Название";
+            this.comboBoxname_product.FormattingEnabled = true;
+            this.comboBoxname_product.Location = new System.Drawing.Point(973, 103);
+            this.comboBoxname_product.Name = "comboBoxname_product";
+            this.comboBoxname_product.Size = new System.Drawing.Size(189, 24);
+            this.comboBoxname_product.TabIndex = 16;
+            this.comboBoxname_product.ValueMember = "Код";
+            // 
+            // comboBoxname_contractor
+            // 
+            this.comboBoxname_contractor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеЗакупкиBindingSource, "Код_контрагента", true));
+            this.comboBoxname_contractor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Наименование контрагента", true));
+            this.comboBoxname_contractor.DataSource = this.представлениеКонтрагентыBindingSource;
+            this.comboBoxname_contractor.DisplayMember = "Наименование";
+            this.comboBoxname_contractor.FormattingEnabled = true;
+            this.comboBoxname_contractor.Location = new System.Drawing.Point(973, 58);
+            this.comboBoxname_contractor.Name = "comboBoxname_contractor";
+            this.comboBoxname_contractor.Size = new System.Drawing.Size(189, 24);
+            this.comboBoxname_contractor.TabIndex = 15;
+            this.comboBoxname_contractor.ValueMember = "Код";
             // 
             // label29
             // 
@@ -1675,7 +1798,8 @@
             this.bindingNavigatorSeparator23,
             this.toolStripButton19,
             this.toolStripButton20,
-            this.toolStripButton21});
+            this.toolStripButton21,
+            this.toolStripButton26});
             this.bindingNavigator7.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator7.MoveFirstItem = this.bindingNavigatorMoveFirstItem7;
             this.bindingNavigator7.MoveLastItem = this.bindingNavigatorMoveLastItem7;
@@ -1686,11 +1810,6 @@
             this.bindingNavigator7.Size = new System.Drawing.Size(1281, 27);
             this.bindingNavigator7.TabIndex = 5;
             this.bindingNavigator7.Text = "bindingNavigator7";
-            // 
-            // представлениеЗакупкиBindingSource
-            // 
-            this.представлениеЗакупкиBindingSource.DataMember = "ПредставлениеЗакупки";
-            this.представлениеЗакупкиBindingSource.DataSource = this.inform_system_baseDataSet;
             // 
             // bindingNavigatorCountItem7
             // 
@@ -1821,6 +1940,83 @@
             this.представлениеЗакупкиDataGridView.RowTemplate.Height = 24;
             this.представлениеЗакупкиDataGridView.Size = new System.Drawing.Size(912, 220);
             this.представлениеЗакупкиDataGridView.TabIndex = 3;
+            this.представлениеЗакупкиDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.представлениеЗакупкиDataGridView_CellContentClick);
+            // 
+            // Код
+            // 
+            this.Код.DataPropertyName = "Код";
+            this.Код.HeaderText = "Код";
+            this.Код.MinimumWidth = 6;
+            this.Код.Name = "Код";
+            this.Код.Visible = false;
+            this.Код.Width = 50;
+            // 
+            // наименованиеКонтрагентаDataGridViewTextBoxColumn
+            // 
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.DataPropertyName = "Наименование контрагента";
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.HeaderText = "Наименование контрагента";
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.Name = "наименованиеКонтрагентаDataGridViewTextBoxColumn";
+            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // наименованиеТовараDataGridViewTextBoxColumn1
+            // 
+            this.наименованиеТовараDataGridViewTextBoxColumn1.DataPropertyName = "Наименование товара";
+            this.наименованиеТовараDataGridViewTextBoxColumn1.HeaderText = "Наименование товара";
+            this.наименованиеТовараDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.наименованиеТовараDataGridViewTextBoxColumn1.Name = "наименованиеТовараDataGridViewTextBoxColumn1";
+            this.наименованиеТовараDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // количествоDataGridViewTextBoxColumn
+            // 
+            this.количествоDataGridViewTextBoxColumn.DataPropertyName = "Количество";
+            this.количествоDataGridViewTextBoxColumn.HeaderText = "Количество";
+            this.количествоDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.количествоDataGridViewTextBoxColumn.Name = "количествоDataGridViewTextBoxColumn";
+            this.количествоDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // ценаDataGridViewTextBoxColumn
+            // 
+            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Цена";
+            this.ценаDataGridViewTextBoxColumn.HeaderText = "Цена";
+            this.ценаDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
+            this.ценаDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // кодDataGridViewTextBoxColumn3
+            // 
+            this.кодDataGridViewTextBoxColumn3.DataPropertyName = "Код";
+            this.кодDataGridViewTextBoxColumn3.HeaderText = "Код";
+            this.кодDataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.кодDataGridViewTextBoxColumn3.Name = "кодDataGridViewTextBoxColumn3";
+            this.кодDataGridViewTextBoxColumn3.Visible = false;
+            this.кодDataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // кодтовараDataGridViewTextBoxColumn1
+            // 
+            this.кодтовараDataGridViewTextBoxColumn1.DataPropertyName = "Код_товара";
+            this.кодтовараDataGridViewTextBoxColumn1.HeaderText = "Код_товара";
+            this.кодтовараDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.кодтовараDataGridViewTextBoxColumn1.Name = "кодтовараDataGridViewTextBoxColumn1";
+            this.кодтовараDataGridViewTextBoxColumn1.Visible = false;
+            this.кодтовараDataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // кодконтрагентаDataGridViewTextBoxColumn2
+            // 
+            this.кодконтрагентаDataGridViewTextBoxColumn2.DataPropertyName = "Код_контрагента";
+            this.кодконтрагентаDataGridViewTextBoxColumn2.HeaderText = "Код_контрагента";
+            this.кодконтрагентаDataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.кодконтрагентаDataGridViewTextBoxColumn2.Name = "кодконтрагентаDataGridViewTextBoxColumn2";
+            this.кодконтрагентаDataGridViewTextBoxColumn2.Visible = false;
+            this.кодконтрагентаDataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // датазакупкиDataGridViewTextBoxColumn
+            // 
+            this.датазакупкиDataGridViewTextBoxColumn.DataPropertyName = "Дата_закупки";
+            this.датазакупкиDataGridViewTextBoxColumn.HeaderText = "Дата_закупки";
+            this.датазакупкиDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.датазакупкиDataGridViewTextBoxColumn.Name = "датазакупкиDataGridViewTextBoxColumn";
+            this.датазакупкиDataGridViewTextBoxColumn.Width = 125;
             // 
             // tabPage3
             // 
@@ -2983,166 +3179,35 @@
             // 
             this.представлениеСкладыTableAdapter.ClearBeforeFill = true;
             // 
-            // comboBoxname_contractor
+            // toolStripButton24
             // 
-            this.comboBoxname_contractor.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеЗакупкиBindingSource, "Код_контрагента", true));
-            this.comboBoxname_contractor.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Наименование контрагента", true));
-            this.comboBoxname_contractor.DataSource = this.представлениеКонтрагентыBindingSource;
-            this.comboBoxname_contractor.DisplayMember = "Наименование";
-            this.comboBoxname_contractor.FormattingEnabled = true;
-            this.comboBoxname_contractor.Location = new System.Drawing.Point(973, 58);
-            this.comboBoxname_contractor.Name = "comboBoxname_contractor";
-            this.comboBoxname_contractor.Size = new System.Drawing.Size(189, 24);
-            this.comboBoxname_contractor.TabIndex = 15;
-            this.comboBoxname_contractor.ValueMember = "Код";
+            this.toolStripButton24.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton24.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton24.Image")));
+            this.toolStripButton24.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton24.Name = "toolStripButton24";
+            this.toolStripButton24.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton24.Text = "toolStripButton24";
+            this.toolStripButton24.Click += new System.EventHandler(this.toolStripButton24_Click);
             // 
-            // comboBoxname_product
+            // toolStripButton25
             // 
-            this.comboBoxname_product.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеЗакупкиBindingSource, "Код_товара", true));
-            this.comboBoxname_product.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Наименование товара", true));
-            this.comboBoxname_product.DataSource = this.представлениеТоварыBindingSource;
-            this.comboBoxname_product.DisplayMember = "Название";
-            this.comboBoxname_product.FormattingEnabled = true;
-            this.comboBoxname_product.Location = new System.Drawing.Point(973, 103);
-            this.comboBoxname_product.Name = "comboBoxname_product";
-            this.comboBoxname_product.Size = new System.Drawing.Size(189, 24);
-            this.comboBoxname_product.TabIndex = 16;
-            this.comboBoxname_product.ValueMember = "Код";
+            this.toolStripButton25.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton25.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton25.Image")));
+            this.toolStripButton25.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton25.Name = "toolStripButton25";
+            this.toolStripButton25.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton25.Text = "toolStripButton25";
+            this.toolStripButton25.Click += new System.EventHandler(this.toolStripButton25_Click);
             // 
-            // dateTimePicker1
+            // toolStripButton26
             // 
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
-            this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
-            this.dateTimePicker1.Location = new System.Drawing.Point(973, 241);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(189, 22);
-            this.dateTimePicker1.TabIndex = 17;
-            // 
-            // Код
-            // 
-            this.Код.DataPropertyName = "Код";
-            this.Код.HeaderText = "Код";
-            this.Код.MinimumWidth = 6;
-            this.Код.Name = "Код";
-            this.Код.Visible = false;
-            this.Код.Width = 50;
-            // 
-            // наименованиеКонтрагентаDataGridViewTextBoxColumn
-            // 
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.DataPropertyName = "Наименование контрагента";
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.HeaderText = "Наименование контрагента";
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.Name = "наименованиеКонтрагентаDataGridViewTextBoxColumn";
-            this.наименованиеКонтрагентаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // наименованиеТовараDataGridViewTextBoxColumn1
-            // 
-            this.наименованиеТовараDataGridViewTextBoxColumn1.DataPropertyName = "Наименование товара";
-            this.наименованиеТовараDataGridViewTextBoxColumn1.HeaderText = "Наименование товара";
-            this.наименованиеТовараDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.наименованиеТовараDataGridViewTextBoxColumn1.Name = "наименованиеТовараDataGridViewTextBoxColumn1";
-            this.наименованиеТовараDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // количествоDataGridViewTextBoxColumn
-            // 
-            this.количествоDataGridViewTextBoxColumn.DataPropertyName = "Количество";
-            this.количествоDataGridViewTextBoxColumn.HeaderText = "Количество";
-            this.количествоDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.количествоDataGridViewTextBoxColumn.Name = "количествоDataGridViewTextBoxColumn";
-            this.количествоDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // ценаDataGridViewTextBoxColumn
-            // 
-            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Цена";
-            this.ценаDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.ценаDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
-            this.ценаDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // кодDataGridViewTextBoxColumn3
-            // 
-            this.кодDataGridViewTextBoxColumn3.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn3.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn3.MinimumWidth = 6;
-            this.кодDataGridViewTextBoxColumn3.Name = "кодDataGridViewTextBoxColumn3";
-            this.кодDataGridViewTextBoxColumn3.Visible = false;
-            this.кодDataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // кодтовараDataGridViewTextBoxColumn1
-            // 
-            this.кодтовараDataGridViewTextBoxColumn1.DataPropertyName = "Код_товара";
-            this.кодтовараDataGridViewTextBoxColumn1.HeaderText = "Код_товара";
-            this.кодтовараDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.кодтовараDataGridViewTextBoxColumn1.Name = "кодтовараDataGridViewTextBoxColumn1";
-            this.кодтовараDataGridViewTextBoxColumn1.Visible = false;
-            this.кодтовараDataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // кодконтрагентаDataGridViewTextBoxColumn2
-            // 
-            this.кодконтрагентаDataGridViewTextBoxColumn2.DataPropertyName = "Код_контрагента";
-            this.кодконтрагентаDataGridViewTextBoxColumn2.HeaderText = "Код_контрагента";
-            this.кодконтрагентаDataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.кодконтрагентаDataGridViewTextBoxColumn2.Name = "кодконтрагентаDataGridViewTextBoxColumn2";
-            this.кодконтрагентаDataGridViewTextBoxColumn2.Visible = false;
-            this.кодконтрагентаDataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // датазакупкиDataGridViewTextBoxColumn
-            // 
-            this.датазакупкиDataGridViewTextBoxColumn.DataPropertyName = "Дата_закупки";
-            this.датазакупкиDataGridViewTextBoxColumn.HeaderText = "Дата_закупки";
-            this.датазакупкиDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.датазакупкиDataGridViewTextBoxColumn.Name = "датазакупкиDataGridViewTextBoxColumn";
-            this.датазакупкиDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // кодDataGridViewTextBoxColumn4
-            // 
-            this.кодDataGridViewTextBoxColumn4.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn4.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.кодDataGridViewTextBoxColumn4.Name = "кодDataGridViewTextBoxColumn4";
-            this.кодDataGridViewTextBoxColumn4.ReadOnly = true;
-            this.кодDataGridViewTextBoxColumn4.Visible = false;
-            this.кодDataGridViewTextBoxColumn4.Width = 50;
-            // 
-            // наименованиеDataGridViewTextBoxColumn4
-            // 
-            this.наименованиеDataGridViewTextBoxColumn4.DataPropertyName = "Наименование";
-            this.наименованиеDataGridViewTextBoxColumn4.HeaderText = "Наименование";
-            this.наименованиеDataGridViewTextBoxColumn4.MinimumWidth = 6;
-            this.наименованиеDataGridViewTextBoxColumn4.Name = "наименованиеDataGridViewTextBoxColumn4";
-            this.наименованиеDataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // иННDataGridViewTextBoxColumn
-            // 
-            this.иННDataGridViewTextBoxColumn.DataPropertyName = "ИНН";
-            this.иННDataGridViewTextBoxColumn.HeaderText = "ИНН";
-            this.иННDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.иННDataGridViewTextBoxColumn.Name = "иННDataGridViewTextBoxColumn";
-            this.иННDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // телефонDataGridViewTextBoxColumn
-            // 
-            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
-            this.телефонDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // адресDataGridViewTextBoxColumn
-            // 
-            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
-            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.адресDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
-            this.адресDataGridViewTextBoxColumn.Width = 125;
+            this.toolStripButton26.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton26.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton26.Image")));
+            this.toolStripButton26.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton26.Name = "toolStripButton26";
+            this.toolStripButton26.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton26.Text = "toolStripButton26";
+            this.toolStripButton26.Click += new System.EventHandler(this.toolStripButton26_Click);
             // 
             // Form1
             // 
@@ -3193,10 +3258,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.представлениеКонтрагентыDataGridView)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator7)).EndInit();
             this.bindingNavigator7.ResumeLayout(false);
             this.bindingNavigator7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.представлениеЗакупкиDataGridView)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
@@ -3535,6 +3600,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripButton toolStripButton22;
+        private System.Windows.Forms.ToolStripButton toolStripButton23;
+        private System.Windows.Forms.ToolStripButton toolStripButton24;
+        private System.Windows.Forms.ToolStripButton toolStripButton25;
+        private System.Windows.Forms.ToolStripButton toolStripButton26;
     }
 }
 

@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Word;
+using Word = Microsoft.Office.Interop.Word;
+
 
 namespace WindowsFormsApp2
 {
@@ -731,7 +734,8 @@ namespace WindowsFormsApp2
             System.Data.DataRowView name_contragents = (System.Data.DataRowView)this.comboBoxname_contractor.SelectedItem;
             Int32 id_name_contragents = Convert.ToInt32(name_contragents.Row[0]);
             Int32 count = Convert.ToInt32(this.textBox9.Text);
-            Double price = Convert.ToDouble(this.textBox10.Text);
+            Decimal price = Convert.ToDecimal(this.textBox10.Text);
+            //Double price = Convert.ToDouble(this.textBox10.Text);
             DateTime date = Convert.ToDateTime(this.dateTimePicker1.Text);
             queriesTableAdapter.CreatePurchases(
                  idproductname, id_name_contragents, count, price, date
@@ -747,7 +751,8 @@ namespace WindowsFormsApp2
             System.Data.DataRowView name_contragents = (System.Data.DataRowView)this.comboBoxname_contractor.SelectedItem;
             Int32 id_name_contragents = Convert.ToInt32(name_contragents.Row[0]);
             Int32 count = Convert.ToInt32(this.textBox9.Text);
-            Double price = Convert.ToDouble(this.textBox10.Text);
+            Decimal price = Convert.ToDecimal(this.textBox10.Text);
+            //Double price = Convert.ToDouble(this.textBox10.Text);
             DateTime date = Convert.ToDateTime(this.dateTimePicker1.Text);
 
             int id = 0;
@@ -782,6 +787,498 @@ namespace WindowsFormsApp2
 
         private void comboBoxWarehouseName_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void представлениеЖалобы_от_клиентовDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnExportToWord_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void представлениеДоговоры_с_контрагентамиDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет по договорам с контрагентами";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, представлениеДоговоры_с_контрагентамиDataGridView.Rows.Count + 1, представлениеДоговоры_с_контрагентамиDataGridView.Columns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < представлениеДоговоры_с_контрагентамиDataGridView.Columns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = представлениеДоговоры_с_контрагентамиDataGridView.Columns[i].HeaderText;
+                }
+
+                // Добавление данных в таблицу
+                for (int i = 0; i < представлениеДоговоры_с_контрагентамиDataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < представлениеДоговоры_с_контрагентамиDataGridView.Columns.Count; j++)
+                    {
+                        wordTable.Cell(i + 2, j + 1).Range.Text = представлениеДоговоры_с_контрагентамиDataGridView.Rows[i].Cells[j].Value?.ToString() ?? "";
+                    }
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_по_договорам"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
+        }
+
+        private void toolStripButton22_Click_1(object sender, EventArgs e)
+        {
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет о договорах с контрагентами";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Вычисление количества видимых столбцов
+                int visibleColumnCount = 0;
+                foreach (DataGridViewColumn column in представлениеДоговоры_с_контрагентамиDataGridView.Columns)
+                {
+                    if (column.Visible)
+                        visibleColumnCount++;
+                }
+
+                // Вычисление количества строк (исключая пустые строки для добавления)
+                int rowCount = 0;
+                foreach (DataGridViewRow row in представлениеДоговоры_с_контрагентамиDataGridView.Rows)
+                {
+                    if (!row.IsNewRow)
+                        rowCount++;
+                }
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, rowCount + 1, visibleColumnCount);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                int currentColumnIndex = 0;
+                foreach (DataGridViewColumn column in представлениеДоговоры_с_контрагентамиDataGridView.Columns)
+                {
+                    if (column.Visible)
+                    {
+                        wordTable.Cell(1, currentColumnIndex + 1).Range.Text = column.HeaderText;
+                        currentColumnIndex++;
+                    }
+                }
+
+                // Добавление данных в таблицу
+                int currentRowIndex = 0;
+                foreach (DataGridViewRow row in представлениеДоговоры_с_контрагентамиDataGridView.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    currentColumnIndex = 0;
+                    for (int j = 0; j < представлениеДоговоры_с_контрагентамиDataGridView.Columns.Count; j++)
+                    {
+                        if (представлениеДоговоры_с_контрагентамиDataGridView.Columns[j].Visible)
+                        {
+                            var cellValue = row.Cells[j].Value;
+
+                            // Проверка на столбец CheckBox и преобразование значений
+                            if (представлениеДоговоры_с_контрагентамиDataGridView.Columns[j] is DataGridViewCheckBoxColumn)
+                            {
+                                wordTable.Cell(currentRowIndex + 2, currentColumnIndex + 1).Range.Text =
+                                    cellValue is bool checkedValue && checkedValue ? "✔" : "✘";
+                            }
+                            else
+                            {
+                                wordTable.Cell(currentRowIndex + 2, currentColumnIndex + 1).Range.Text = cellValue?.ToString() ?? "";
+                            }
+
+                            currentColumnIndex++;
+                        }
+                    }
+
+                    currentRowIndex++;
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_о_договорах"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
+        }
+
+        private void toolStripButton23_Click(object sender, EventArgs e)
+        {
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет о жалобах от клиентов";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем только видимые столбцы
+                var visibleColumns = представлениеЖалобы_от_клиентовDataGridView.Columns.Cast<DataGridViewColumn>()
+                    .Where(col => col.Visible).ToList();
+
+                // Подсчет строк, исключая последнюю пустую строку
+                int rowCount = представлениеЖалобы_от_клиентовDataGridView.Rows
+                    .Cast<DataGridViewRow>()
+                    .Count(row => !row.IsNewRow);
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, rowCount + 1, visibleColumns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < visibleColumns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = visibleColumns[i].HeaderText;
+                }
+
+                // Добавление данных в таблицу
+                int currentRowIndex = 0;
+                foreach (DataGridViewRow row in представлениеЖалобы_от_клиентовDataGridView.Rows)
+                {
+                    if (row.IsNewRow) continue; // Пропускаем пустую строку
+
+                    for (int j = 0; j < visibleColumns.Count; j++)
+                    {
+                        var cellValue = row.Cells[visibleColumns[j].Index].Value;
+
+                        if (cellValue is bool checkboxValue) // Если это чекбокс
+                        {
+                            wordTable.Cell(currentRowIndex + 2, j + 1).Range.Text = checkboxValue ? "✔" : "✘";
+                        }
+                        else
+                        {
+                            wordTable.Cell(currentRowIndex + 2, j + 1).Range.Text = cellValue?.ToString() ?? "";
+                        }
+                    }
+
+                    currentRowIndex++;
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_о_жалобах"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
+        }
+
+        private void представлениеОстатки_на_складахDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton24_Click(object sender, EventArgs e)
+        {
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет об остатках на складах";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем только видимые столбцы
+                var visibleColumns = представлениеОстатки_на_складахDataGridView.Columns.Cast<DataGridViewColumn>()
+                    .Where(col => col.Visible).ToList();
+
+                // Подсчет строк, исключая последнюю пустую строку
+                int rowCount = представлениеОстатки_на_складахDataGridView.Rows
+                    .Cast<DataGridViewRow>()
+                    .Count(row => !row.IsNewRow);
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, rowCount + 1, visibleColumns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < visibleColumns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = visibleColumns[i].HeaderText;
+                }
+
+                // Добавление данных в таблицу
+                int currentRowIndex = 0;
+                foreach (DataGridViewRow row in представлениеОстатки_на_складахDataGridView.Rows)
+                {
+                    if (row.IsNewRow) continue; // Пропускаем пустую строку
+
+                    for (int j = 0; j < visibleColumns.Count; j++)
+                    {
+                        var cellValue = row.Cells[visibleColumns[j].Index].Value;
+                        wordTable.Cell(currentRowIndex + 2, j + 1).Range.Text = cellValue?.ToString() ?? "";
+                    }
+
+                    currentRowIndex++;
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_об_остатках_на_складах"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
+
+        }
+
+        private void toolStripButton25_Click(object sender, EventArgs e)
+        {
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет по контрагентам";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем только видимые столбцы, кроме столбца "Код"
+                var visibleColumns = представлениеКонтрагентыDataGridView.Columns.Cast<DataGridViewColumn>()
+                    .Where(col => col.Visible && col.HeaderText != "Код").ToList();
+
+                // Проверка: если видимых столбцов нет
+                if (visibleColumns.Count == 0)
+                {
+                    MessageBox.Show("Нет видимых столбцов для отображения в отчете.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Подсчет строк, исключая последнюю пустую строку
+                var nonEmptyRows = представлениеКонтрагентыDataGridView.Rows.Cast<DataGridViewRow>()
+                    .Where(row => !row.IsNewRow).ToList();
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, nonEmptyRows.Count + 1, visibleColumns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < visibleColumns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = visibleColumns[i].HeaderText;
+                }
+
+                // Добавление данных в таблицу
+                for (int rowIndex = 0; rowIndex < nonEmptyRows.Count; rowIndex++)
+                {
+                    for (int colIndex = 0; colIndex < visibleColumns.Count; colIndex++)
+                    {
+                        var cellValue = nonEmptyRows[rowIndex].Cells[visibleColumns[colIndex].Index].Value;
+                        wordTable.Cell(rowIndex + 2, colIndex + 1).Range.Text = cellValue?.ToString() ?? "";
+                    }
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_по_контрагентам"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
+
+
+        }
+
+        private void представлениеКонтрагентыDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void представлениеЗакупкиDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void toolStripButton26_Click(object sender, EventArgs e)
+        {
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет по закупкам";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем только видимые столбцы, кроме столбца "Код"
+                var visibleColumns = представлениеЗакупкиDataGridView.Columns.Cast<DataGridViewColumn>()
+                    .Where(col => col.Visible && col.HeaderText != "Код").ToList();
+
+                // Проверка: если видимых столбцов нет
+                if (visibleColumns.Count == 0)
+                {
+                    MessageBox.Show("Нет видимых столбцов для отображения в отчете.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Подсчет строк, исключая последнюю пустую строку
+                var nonEmptyRows = представлениеЗакупкиDataGridView.Rows.Cast<DataGridViewRow>()
+                    .Where(row => !row.IsNewRow).ToList();
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, nonEmptyRows.Count + 1, visibleColumns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < visibleColumns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = visibleColumns[i].HeaderText;
+                }
+
+                // Добавление данных в таблицу
+                for (int rowIndex = 0; rowIndex < nonEmptyRows.Count; rowIndex++)
+                {
+                    for (int colIndex = 0; colIndex < visibleColumns.Count; colIndex++)
+                    {
+                        var cellValue = nonEmptyRows[rowIndex].Cells[visibleColumns[colIndex].Index].Value;
+                        wordTable.Cell(rowIndex + 2, colIndex + 1).Range.Text = cellValue?.ToString() ?? "";
+                    }
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_по_закупкам"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                wordDoc.Close(false);
+                wordApp.Quit();
+            }
 
         }
     }
