@@ -25,6 +25,10 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеОплаты". При необходимости она может быть перемещена или удалена.
+            this.представлениеОплатыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОплаты);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеЗаказы". При необходимости она может быть перемещена или удалена.
+            this.представлениеЗаказыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеЗаказы);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха". При необходимости она может быть перемещена или удалена.
             this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСклады". При необходимости она может быть перемещена или удалена.
@@ -1355,6 +1359,86 @@ namespace WindowsFormsApp2
                 int id = (int)drv["Код"];
                 queriesTableAdapter.DeleteDetaiOutput(id);
                 this.представлениеВыпуск_ДеталейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_Деталей);
+            }
+        }
+
+        private void toolStripButtonPaymentAdd_Click(object sender, EventArgs e)
+        {
+            Int32 sum= Convert.ToInt32(this.textBoxPaymentSum.Text);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerPayment.Text);
+                
+            queriesTableAdapter.CreatePayment(sum, date);
+
+            this.представлениеОплатыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОплаты);
+        }
+
+        private void toolStripButtonPaymentUpdate_Click(object sender, EventArgs e)
+        {
+            Int32 sum = Convert.ToInt32(this.textBoxPaymentSum.Text);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerPayment.Text);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеОплатыBindingSource.Current;
+            id = (int)drv["код_оплаты"];
+            queriesTableAdapter.UpdatePayment(id, sum, date);
+
+            this.представлениеОплатыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОплаты);
+        }
+
+        private void toolStripButtonPaymentDelete_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеОплатыBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеОплатыBindingSource.Current;
+                int id = (int)drv["код_оплаты"];
+                queriesTableAdapter.DeletePayment(id);
+                this.представлениеОплатыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОплаты);
+            }
+        }
+
+        private void toolStripButtonOrdersAdd_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView payment = (System.Data.DataRowView)this.comboBoxOrderPayment.SelectedValue;
+            Int32 id_payment = Convert.ToInt32(payment.Row[0]);
+            System.Data.DataRowView contagent = (System.Data.DataRowView)this.comboBoxOrderContragent.SelectedValue;
+            Int32 id_contagent = Convert.ToInt32(contagent.Row[0]);
+
+            queriesTableAdapter.CreateOrder(id_contagent, id_payment);
+
+            this.представлениеЗаказыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеЗаказы);
+
+        }
+
+        private void toolStripButtonOrdersUpdate_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView payment = (System.Data.DataRowView)this.comboBoxOrderPayment.SelectedValue;
+            Int32 id_payment = Convert.ToInt32(payment.Row[0]);
+            System.Data.DataRowView contagent = (System.Data.DataRowView)this.comboBoxOrderContragent.SelectedValue;
+            Int32 id_contagent = Convert.ToInt32(contagent.Row[0]);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеЗаказыBindingSource.Current;
+            id = (int)drv["код_заказа"];
+            queriesTableAdapter.UpdateOrder(id, id_contagent, id_payment);
+
+            this.представлениеЗаказыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеЗаказы);
+
+        }
+
+        private void toolStripButtonOrdersDelete_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеЗаказыBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеЗаказыBindingSource.Current;
+                int id = (int)drv["код_заказа"];
+                queriesTableAdapter.DeleteOrder(id);
+                this.представлениеЗаказыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеЗаказы);
             }
         }
     }
