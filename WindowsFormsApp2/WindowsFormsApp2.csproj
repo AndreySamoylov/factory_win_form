@@ -95,11 +95,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>inform_system_baseDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="inform_system_baseDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>inform_system_baseDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -125,17 +120,6 @@
     </None>
     <None Include="inform_system_baseDataSet.xss">
       <DependentUpon>inform_system_baseDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="inform_system_baseDataSet1.xsc">
-      <DependentUpon>inform_system_baseDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="inform_system_baseDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>inform_system_baseDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="inform_system_baseDataSet1.xss">
-      <DependentUpon>inform_system_baseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Microsoft.Office.Interop.Word;
 using Word = Microsoft.Office.Interop.Word;
 
@@ -24,8 +25,8 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet11.ПредставлениеДеталиКузовногоЦеха". При необходимости она может быть перемещена или удалена.
-            this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet11.ПредставлениеДеталиКузовногоЦеха);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха". При необходимости она может быть перемещена или удалена.
+            this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСклады". При необходимости она может быть перемещена или удалена.
             this.представлениеСкладыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСклады);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеТовары". При необходимости она может быть перемещена или удалена.
@@ -1284,24 +1285,77 @@ namespace WindowsFormsApp2
 
         }
 
-        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void toolStripButtonKuzovChexAdd_Click(object sender, EventArgs e)
         {
+            String name = this.textBoxKuzovChexName.Text;
 
+            queriesTableAdapter.CreateDetail(name);
+
+            this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха);
         }
 
-        private void label30_Click(object sender, EventArgs e)
+        private void toolStripButtonKuzovChexUpdate_Click(object sender, EventArgs e)
         {
+            String name = this.textBoxKuzovChexName.Text;
 
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView) this.представлениеДеталиКузовногоЦехаBindingSource.Current;
+            id = (int)drv["Код детали"];
+            queriesTableAdapter.UpdateDetail(id, name);
+            this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха);
         }
 
-        private void bindingNavigator8_RefreshItems(object sender, EventArgs e)
+        private void toolStripButtonKuzovChexDelete_Click(object sender, EventArgs e)
         {
-
+            DataRowView drv;
+            int i = this.представлениеДеталиКузовногоЦехаBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)this.представлениеДеталиКузовногоЦехаBindingSource.Current;
+                int id = (int)drv["Код детали"];
+                queriesTableAdapter.DeleteDetail(id);
+                this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДеталиКузовногоЦеха);
+            }
         }
 
-        private void label31_Click(object sender, EventArgs e)
+        private void toolStripButtonDetailOutputAdd_Click(object sender, EventArgs e)
         {
+            System.Data.DataRowView detail = (System.Data.DataRowView)this.comboBoxDetailOutputName.SelectedValue;
+            Int32 id_detail = Convert.ToInt32(detail.Row[0]);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerDetailOutputDate.Text);
 
+            queriesTableAdapter.CreateDetailOutput(id_detail, date);
+
+            this.представлениеВыпуск_ДеталейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_Деталей);
+        }
+
+        private void toolStripButtonDetailOutputUpdate_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView detail = (System.Data.DataRowView)this.comboBoxDetailOutputName.SelectedValue;
+            Int32 id_detail = Convert.ToInt32(detail.Row[0]);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerDetailOutputDate.Text);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеВыпуск_ДеталейBindingSource.Current;
+            id = (int) drv["Код"];
+            queriesTableAdapter.UpdateDetaiOutput(id, id_detail, date);
+
+            this.представлениеВыпуск_ДеталейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_Деталей);
+        }
+
+        private void toolStripButtonDetailOutputDelete_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеВыпуск_ДеталейBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеВыпуск_ДеталейBindingSource.Current;
+                int id = (int)drv["Код"];
+                queriesTableAdapter.DeleteDetaiOutput(id);
+                this.представлениеВыпуск_ДеталейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_Деталей);
+            }
         }
     }
 }
