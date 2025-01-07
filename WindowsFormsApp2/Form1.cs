@@ -24,6 +24,8 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet11.ПредставлениеДеталиКузовногоЦеха". При необходимости она может быть перемещена или удалена.
+            this.представлениеДеталиКузовногоЦехаTableAdapter.Fill(this.inform_system_baseDataSet11.ПредставлениеДеталиКузовногоЦеха);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСклады". При необходимости она может быть перемещена или удалена.
             this.представлениеСкладыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСклады);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеТовары". При необходимости она может быть перемещена или удалена.
@@ -1279,6 +1281,26 @@ namespace WindowsFormsApp2
                 wordDoc.Close(false);
                 wordApp.Quit();
             }
+
+        }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label30_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator8_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label31_Click(object sender, EventArgs e)
+        {
 
         }
     }

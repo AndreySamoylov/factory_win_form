@@ -1,0 +1,1563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="inform_system_baseDataSet1" targetNamespace="http://tempuri.org/inform_system_baseDataSet1.xsd" xmlns:mstns="http://tempuri.org/inform_system_baseDataSet1.xsd" xmlns="http://tempuri.org/inform_system_baseDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="inform_system_baseConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="inform_system_baseConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp2.Properties.Settings.GlobalReference.Default.inform_system_baseConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеБиблиотекаКнигиTableAdapter" GeneratorDataComponentClassName="ПредставлениеБиблиотекаКнигиTableAdapter" Name="ПредставлениеБиблиотекаКниги" UserDataComponentName="ПредставлениеБиблиотекаКнигиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеБиблиотекаКниги" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_книги, название_книги, автор_книги, год_издания, id_типа_книги, id_места_хранения, название_места, название_типа FROM dbo.ПредставлениеБиблиотекаКниги</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_книги" DataSetColumn="код_книги" />
+              <Mapping SourceColumn="название_книги" DataSetColumn="название_книги" />
+              <Mapping SourceColumn="автор_книги" DataSetColumn="автор_книги" />
+              <Mapping SourceColumn="год_издания" DataSetColumn="год_издания" />
+              <Mapping SourceColumn="id_типа_книги" DataSetColumn="id_типа_книги" />
+              <Mapping SourceColumn="id_места_хранения" DataSetColumn="id_места_хранения" />
+              <Mapping SourceColumn="название_места" DataSetColumn="название_места" />
+              <Mapping SourceColumn="название_типа" DataSetColumn="название_типа" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеБиблиотекаМестаХраненияTableAdapter" GeneratorDataComponentClassName="ПредставлениеБиблиотекаМестаХраненияTableAdapter" Name="ПредставлениеБиблиотекаМестаХранения" UserDataComponentName="ПредставлениеБиблиотекаМестаХраненияTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеБиблиотекаМестаХранения" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_места_хранения, название_места FROM dbo.ПредставлениеБиблиотекаМестаХранения</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_места_хранения" DataSetColumn="код_места_хранения" />
+              <Mapping SourceColumn="название_места" DataSetColumn="название_места" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеБиблиотекаТипыКнигTableAdapter" GeneratorDataComponentClassName="ПредставлениеБиблиотекаТипыКнигTableAdapter" Name="ПредставлениеБиблиотекаТипыКниг" UserDataComponentName="ПредставлениеБиблиотекаТипыКнигTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеБиблиотекаТипыКниг" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_типа_книг, название_типа FROM dbo.ПредставлениеБиблиотекаТипыКниг</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_типа_книг" DataSetColumn="код_типа_книг" />
+              <Mapping SourceColumn="название_типа" DataSetColumn="название_типа" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеВыпуск_ДеталейTableAdapter" GeneratorDataComponentClassName="ПредставлениеВыпуск_ДеталейTableAdapter" Name="ПредставлениеВыпуск_Деталей" UserDataComponentName="ПредставлениеВыпуск_ДеталейTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеВыпуск_Деталей" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Наименование, Код, [Код детали], [Дата выпуска] FROM dbo.ПредставлениеВыпуск_Деталей</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код детали" DataSetColumn="Код детали" />
+              <Mapping SourceColumn="Дата выпуска" DataSetColumn="Дата выпуска" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеДеталиКузовногоЦехаTableAdapter" GeneratorDataComponentClassName="ПредставлениеДеталиКузовногоЦехаTableAdapter" Name="ПредставлениеДеталиКузовногоЦеха" UserDataComponentName="ПредставлениеДеталиКузовногоЦехаTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеДеталиКузовногоЦеха" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Код детали], Наименование, Название FROM dbo.ПредставлениеДеталиКузовногоЦеха</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код детали" DataSetColumn="Код детали" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеДоговоры_с_контрагентамиTableAdapter" GeneratorDataComponentClassName="ПредставлениеДоговоры_с_контрагентамиTableAdapter" Name="ПредставлениеДоговоры_с_контрагентами" UserDataComponentName="ПредставлениеДоговоры_с_контрагентамиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеДоговоры_с_контрагентами" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Код_контрагента, Номер_договора, Договор_подписан, Наименование FROM dbo.ПредставлениеДоговоры_с_контрагентами</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код_контрагента" DataSetColumn="Код_контрагента" />
+              <Mapping SourceColumn="Номер_договора" DataSetColumn="Номер_договора" />
+              <Mapping SourceColumn="Договор_подписан" DataSetColumn="Договор_подписан" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеДолжностиTableAdapter" GeneratorDataComponentClassName="ПредставлениеДолжностиTableAdapter" Name="ПредставлениеДолжности" UserDataComponentName="ПредставлениеДолжностиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеДолжности" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Наименование, [Почасовая ставка] FROM dbo.ПредставлениеДолжности</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеЖалобы_от_клиентовTableAdapter" GeneratorDataComponentClassName="ПредставлениеЖалобы_от_клиентовTableAdapter" Name="ПредставлениеЖалобы_от_клиентов" UserDataComponentName="ПредставлениеЖалобы_от_клиентовTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеЖалобы_от_клиентов" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Код_контрагента, Жалоба_рассмотрена, Дата_жалобы, Текст_жалобы, Наименование FROM dbo.ПредставлениеЖалобы_от_клиентов</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код_контрагента" DataSetColumn="Код_контрагента" />
+              <Mapping SourceColumn="Жалоба_рассмотрена" DataSetColumn="Жалоба_рассмотрена" />
+              <Mapping SourceColumn="Дата_жалобы" DataSetColumn="Дата_жалобы" />
+              <Mapping SourceColumn="Текст_жалобы" DataSetColumn="Текст_жалобы" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеЗаказыTableAdapter" GeneratorDataComponentClassName="ПредставлениеЗаказыTableAdapter" Name="ПредставлениеЗаказы" UserDataComponentName="ПредставлениеЗаказыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеЗаказы" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_заказа, код_контагента, код_оплаты, Наименование, ИНН, Email, Телефон, Адрес, сумма, дата FROM dbo.ПредставлениеЗаказы</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_заказа" DataSetColumn="код_заказа" />
+              <Mapping SourceColumn="код_контагента" DataSetColumn="код_контагента" />
+              <Mapping SourceColumn="код_оплаты" DataSetColumn="код_оплаты" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="ИНН" DataSetColumn="ИНН" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Телефон" DataSetColumn="Телефон" />
+              <Mapping SourceColumn="Адрес" DataSetColumn="Адрес" />
+              <Mapping SourceColumn="сумма" DataSetColumn="сумма" />
+              <Mapping SourceColumn="дата" DataSetColumn="дата" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеЗакупкиTableAdapter" GeneratorDataComponentClassName="ПредставлениеЗакупкиTableAdapter" Name="ПредставлениеЗакупки" UserDataComponentName="ПредставлениеЗакупкиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеЗакупки" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Код_товара, Код_контрагента, Количество, Цена, Дата_закупки, [Наименование контрагента], [Наименование товара] FROM dbo.ПредставлениеЗакупки</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код_товара" DataSetColumn="Код_товара" />
+              <Mapping SourceColumn="Код_контрагента" DataSetColumn="Код_контрагента" />
+              <Mapping SourceColumn="Количество" DataSetColumn="Количество" />
+              <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
+              <Mapping SourceColumn="Дата_закупки" DataSetColumn="Дата_закупки" />
+              <Mapping SourceColumn="Наименование контрагента" DataSetColumn="Наименование контрагента" />
+              <Mapping SourceColumn="Наименование товара" DataSetColumn="Наименование товара" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеЗакупки_1TableAdapter" GeneratorDataComponentClassName="ПредставлениеЗакупки_1TableAdapter" Name="ПредставлениеЗакупки_1" UserDataComponentName="ПредставлениеЗакупки_1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеЗакупки_1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Код_товара, Код_контрагента, Количество, Цена, Дата_закупки, [Наименование контрагента], [Наименование товара] FROM dbo.ПредставлениеЗакупки_1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код_товара" DataSetColumn="Код_товара" />
+              <Mapping SourceColumn="Код_контрагента" DataSetColumn="Код_контрагента" />
+              <Mapping SourceColumn="Количество" DataSetColumn="Количество" />
+              <Mapping SourceColumn="Цена" DataSetColumn="Цена" />
+              <Mapping SourceColumn="Дата_закупки" DataSetColumn="Дата_закупки" />
+              <Mapping SourceColumn="Наименование контрагента" DataSetColumn="Наименование контрагента" />
+              <Mapping SourceColumn="Наименование товара" DataSetColumn="Наименование товара" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеКонтрагентыTableAdapter" GeneratorDataComponentClassName="ПредставлениеКонтрагентыTableAdapter" Name="ПредставлениеКонтрагенты" UserDataComponentName="ПредставлениеКонтрагентыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеКонтрагенты" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Наименование, ИНН, Email, Телефон, Адрес FROM dbo.ПредставлениеКонтрагенты</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="ИНН" DataSetColumn="ИНН" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="Телефон" DataSetColumn="Телефон" />
+              <Mapping SourceColumn="Адрес" DataSetColumn="Адрес" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеОплатыTableAdapter" GeneratorDataComponentClassName="ПредставлениеОплатыTableAdapter" Name="ПредставлениеОплаты" UserDataComponentName="ПредставлениеОплатыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеОплаты" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_оплаты, сумма, дата FROM dbo.ПредставлениеОплаты</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_оплаты" DataSetColumn="код_оплаты" />
+              <Mapping SourceColumn="сумма" DataSetColumn="сумма" />
+              <Mapping SourceColumn="дата" DataSetColumn="дата" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеОстатки_на_складахTableAdapter" GeneratorDataComponentClassName="ПредставлениеОстатки_на_складахTableAdapter" Name="ПредставлениеОстатки_на_складах" UserDataComponentName="ПредставлениеОстатки_на_складахTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеОстатки_на_складах" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Наименование склада], [Наименование товара], [Количество товара], Код_склада, Код_товара, Код FROM dbo.ПредставлениеОстатки_на_складах</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Наименование склада" DataSetColumn="Наименование склада" />
+              <Mapping SourceColumn="Наименование товара" DataSetColumn="Наименование товара" />
+              <Mapping SourceColumn="Количество товара" DataSetColumn="Количество товара" />
+              <Mapping SourceColumn="Код_склада" DataSetColumn="Код_склада" />
+              <Mapping SourceColumn="Код_товара" DataSetColumn="Код_товара" />
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеОтделыTableAdapter" GeneratorDataComponentClassName="ПредставлениеОтделыTableAdapter" Name="ПредставлениеОтделы" UserDataComponentName="ПредставлениеОтделыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеОтделы" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT id, department_name FROM dbo.ПредставлениеОтделы</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="department_name" DataSetColumn="department_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеПриемкаСырьяTableAdapter" GeneratorDataComponentClassName="ПредставлениеПриемкаСырьяTableAdapter" Name="ПредставлениеПриемкаСырья" UserDataComponentName="ПредставлениеПриемкаСырьяTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеПриемкаСырья" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT наименования, дата_приёмки, количество, код_приёмки, код_сырья FROM dbo.ПредставлениеПриемкаСырья</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="наименования" DataSetColumn="наименования" />
+              <Mapping SourceColumn="дата_приёмки" DataSetColumn="дата_приёмки" />
+              <Mapping SourceColumn="количество" DataSetColumn="количество" />
+              <Mapping SourceColumn="код_приёмки" DataSetColumn="код_приёмки" />
+              <Mapping SourceColumn="код_сырья" DataSetColumn="код_сырья" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеРасчетные_ведомостиTableAdapter" GeneratorDataComponentClassName="ПредставлениеРасчетные_ведомостиTableAdapter" Name="ПредставлениеРасчетные_ведомости" UserDataComponentName="ПредставлениеРасчетные_ведомостиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеРасчетные_ведомости" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Дата, Код_сотрудника, ФИО, Отработанные_часы, Выплата FROM dbo.ПредставлениеРасчетные_ведомости</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Дата" DataSetColumn="Дата" />
+              <Mapping SourceColumn="Код_сотрудника" DataSetColumn="Код_сотрудника" />
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+              <Mapping SourceColumn="Отработанные_часы" DataSetColumn="Отработанные_часы" />
+              <Mapping SourceColumn="Выплата" DataSetColumn="Выплата" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеСкладыTableAdapter" GeneratorDataComponentClassName="ПредставлениеСкладыTableAdapter" Name="ПредставлениеСклады" UserDataComponentName="ПредставлениеСкладыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеСклады" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Наименование FROM dbo.ПредставлениеСклады</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеСотрудникиTableAdapter" GeneratorDataComponentClassName="ПредставлениеСотрудникиTableAdapter" Name="ПредставлениеСотрудники" UserDataComponentName="ПредставлениеСотрудникиTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеСотрудники" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, ФИО, Код_должности, Наименование, Код_отдела, department_name FROM dbo.ПредставлениеСотрудники</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="ФИО" DataSetColumn="ФИО" />
+              <Mapping SourceColumn="Код_должности" DataSetColumn="Код_должности" />
+              <Mapping SourceColumn="Наименование" DataSetColumn="Наименование" />
+              <Mapping SourceColumn="Код_отдела" DataSetColumn="Код_отдела" />
+              <Mapping SourceColumn="department_name" DataSetColumn="department_name" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеСырьёTableAdapter" GeneratorDataComponentClassName="ПредставлениеСырьёTableAdapter" Name="ПредставлениеСырьё" UserDataComponentName="ПредставлениеСырьёTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеСырьё" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT код_сырья, наименования FROM dbo.ПредставлениеСырьё</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="код_сырья" DataSetColumn="код_сырья" />
+              <Mapping SourceColumn="наименования" DataSetColumn="наименования" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ПредставлениеТоварыTableAdapter" GeneratorDataComponentClassName="ПредставлениеТоварыTableAdapter" Name="ПредставлениеТовары" UserDataComponentName="ПредставлениеТоварыTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.ПредставлениеТовары" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Название FROM dbo.ПредставлениеТовары</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Название" DataSetColumn="Название" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateComplaint" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateComplaint" MethodsParameterType="CLR" Modifier="Public" Name="CreateComplaint" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CreateComplaint">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateComplaint</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Текст_жалобы" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Жалоба_рассмотрена" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Дата_жалобы" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateContractors" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateContractors" MethodsParameterType="CLR" Modifier="Public" Name="CreateContractors" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="CreateContractors">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateContractors</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ИНН" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Телефон" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Адрес" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateContracts" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateContracts" MethodsParameterType="CLR" Modifier="Public" Name="CreateContracts" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="CreateContracts">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateContracts</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Номер_договора" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Договор_подписан" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateDepartments" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateDepartments" MethodsParameterType="CLR" Modifier="Public" Name="CreateDepartments" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="CreateDepartments">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateDepartments</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@department_name" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateLibraryBook" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateLibraryBook" MethodsParameterType="CLR" Modifier="Public" Name="CreateLibraryBook" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="CreateLibraryBook">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateLibraryBook</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_книги" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@автор_книги" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@год_издания" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_типа_книги" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_места_хранения" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateLibraryBookType" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateLibraryBookType" MethodsParameterType="CLR" Modifier="Public" Name="CreateLibraryBookType" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="CreateLibraryBookType">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateLibraryBookType</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_типа" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateLibraryStorage" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateLibraryStorage" MethodsParameterType="CLR" Modifier="Public" Name="CreateLibraryStorage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="CreateLibraryStorage">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateLibraryStorage</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_места" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateOrder" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateOrder" MethodsParameterType="CLR" Modifier="Public" Name="CreateOrder" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="CreateOrder">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateOrder</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_контагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_оплаты" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreatePayment" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreatePayment" MethodsParameterType="CLR" Modifier="Public" Name="CreatePayment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="CreatePayment">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreatePayment</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@сумма" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@дата" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreatePayroll" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreatePayroll" MethodsParameterType="CLR" Modifier="Public" Name="CreatePayroll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy9" UserSourceName="CreatePayroll">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreatePayroll</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@Дата" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_сотрудника" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Отработанные_часы" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Выплата" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreatePositions" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreatePositions" MethodsParameterType="CLR" Modifier="Public" Name="CreatePositions" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy10" UserSourceName="CreatePositions">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreatePositions</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Почасовая_ставка" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreatePurchases" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreatePurchases" MethodsParameterType="CLR" Modifier="Public" Name="CreatePurchases" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy11" UserSourceName="CreatePurchases">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreatePurchases</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_товара" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Цена" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Дата_закупки" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateQuantity" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateQuantity" MethodsParameterType="CLR" Modifier="Public" Name="CreateQuantity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy12" UserSourceName="CreateQuantity">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateQuantity</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_склада" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_товара" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateRaw" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateRaw" MethodsParameterType="CLR" Modifier="Public" Name="CreateRaw" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy13" UserSourceName="CreateRaw">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateRaw</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@наименования" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateRawAccepting" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateRawAccepting" MethodsParameterType="CLR" Modifier="Public" Name="CreateRawAccepting" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy14" UserSourceName="CreateRawAccepting">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateRawAccepting</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@дата_приёмки" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_сырья" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.CreateStaff" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="CreateStaff" MethodsParameterType="CLR" Modifier="Public" Name="CreateStaff" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy15" UserSourceName="CreateStaff">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.CreateStaff</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ФИО" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_должности" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_отдела" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteComplaint" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteComplaint" MethodsParameterType="CLR" Modifier="Public" Name="DeleteComplaint" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy16" UserSourceName="DeleteComplaint">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteComplaint</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteContractors" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteContractors" MethodsParameterType="CLR" Modifier="Public" Name="DeleteContractors" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy17" UserSourceName="DeleteContractors">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteContractors</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteContracts" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteContracts" MethodsParameterType="CLR" Modifier="Public" Name="DeleteContracts" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy18" UserSourceName="DeleteContracts">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteContracts</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteDepartments" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteDepartments" MethodsParameterType="CLR" Modifier="Public" Name="DeleteDepartments" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy19" UserSourceName="DeleteDepartments">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteDepartments</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteLibraryBook" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteLibraryBook" MethodsParameterType="CLR" Modifier="Public" Name="DeleteLibraryBook" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy20" UserSourceName="DeleteLibraryBook">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteLibraryBook</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_книги" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteLibraryBookType" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteLibraryBookType" MethodsParameterType="CLR" Modifier="Public" Name="DeleteLibraryBookType" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy21" UserSourceName="DeleteLibraryBookType">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteLibraryBookType</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_типа_книг" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteLibraryStorage" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteLibraryStorage" MethodsParameterType="CLR" Modifier="Public" Name="DeleteLibraryStorage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy22" UserSourceName="DeleteLibraryStorage">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteLibraryStorage</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_места_хранения" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteOrder" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteOrder" MethodsParameterType="CLR" Modifier="Public" Name="DeleteOrder" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy23" UserSourceName="DeleteOrder">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteOrder</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_заказа" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeletePayment" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeletePayment" MethodsParameterType="CLR" Modifier="Public" Name="DeletePayment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy24" UserSourceName="DeletePayment">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeletePayment</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_оплаты" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeletePayroll" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeletePayroll" MethodsParameterType="CLR" Modifier="Public" Name="DeletePayroll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy25" UserSourceName="DeletePayroll">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeletePayroll</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeletePositions" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeletePositions" MethodsParameterType="CLR" Modifier="Public" Name="DeletePositions" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy26" UserSourceName="DeletePositions">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeletePositions</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeletePurchases" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeletePurchases" MethodsParameterType="CLR" Modifier="Public" Name="DeletePurchases" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy27" UserSourceName="DeletePurchases">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeletePurchases</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteQuantity" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteQuantity" MethodsParameterType="CLR" Modifier="Public" Name="DeleteQuantity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy28" UserSourceName="DeleteQuantity">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteQuantity</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteRaw" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteRaw" MethodsParameterType="CLR" Modifier="Public" Name="DeleteRaw" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy29" UserSourceName="DeleteRaw">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteRaw</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_сырья" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteRawAccepting" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteRawAccepting" MethodsParameterType="CLR" Modifier="Public" Name="DeleteRawAccepting" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy30" UserSourceName="DeleteRawAccepting">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteRawAccepting</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_приёмки" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.DeleteStaff" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="DeleteStaff" MethodsParameterType="CLR" Modifier="Public" Name="DeleteStaff" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy31" UserSourceName="DeleteStaff">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.DeleteStaff</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateComplain" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateComplain" MethodsParameterType="CLR" Modifier="Public" Name="UpdateComplain" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy32" UserSourceName="UpdateComplain">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateComplain</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Текст_жалобы" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Жалоба_рассмотрена" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Дата_жалобы" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateContractors" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateContractors" MethodsParameterType="CLR" Modifier="Public" Name="UpdateContractors" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy33" UserSourceName="UpdateContractors">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateContractors</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ИНН" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Телефон" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Адрес" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateContracts" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateContracts" MethodsParameterType="CLR" Modifier="Public" Name="UpdateContracts" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy34" UserSourceName="UpdateContracts">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateContracts</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Номер_договора" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="bit" DbType="Boolean" Direction="Input" ParameterName="@Договор_подписан" Precision="1" ProviderType="Bit" Scale="0" Size="1" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateDepartments" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateDepartments" MethodsParameterType="CLR" Modifier="Public" Name="UpdateDepartments" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy35" UserSourceName="UpdateDepartments">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateDepartments</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_отдела" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@department_name" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateLibraryBook" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateLibraryBook" MethodsParameterType="CLR" Modifier="Public" Name="UpdateLibraryBook" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy36" UserSourceName="UpdateLibraryBook">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateLibraryBook</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_книги" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_книги" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@автор_книги" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@год_издания" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_типа_книги" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@id_места_хранения" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateLibraryBookType" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateLibraryBookType" MethodsParameterType="CLR" Modifier="Public" Name="UpdateLibraryBookType" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy37" UserSourceName="UpdateLibraryBookType">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateLibraryBookType</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_типа_книг" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_типа" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateLibraryStorage" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateLibraryStorage" MethodsParameterType="CLR" Modifier="Public" Name="UpdateLibraryStorage" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy38" UserSourceName="UpdateLibraryStorage">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateLibraryStorage</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_места_хранения" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@название_места" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateOrder" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateOrder" MethodsParameterType="CLR" Modifier="Public" Name="UpdateOrder" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy39" UserSourceName="UpdateOrder">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateOrder</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_заказа" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_контагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_оплаты" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdatePayment" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdatePayment" MethodsParameterType="CLR" Modifier="Public" Name="UpdatePayment" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy40" UserSourceName="UpdatePayment">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdatePayment</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_оплаты" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="money" DbType="Currency" Direction="Input" ParameterName="@сумма" Precision="19" ProviderType="Money" Scale="4" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@дата" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdatePayroll" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdatePayroll" MethodsParameterType="CLR" Modifier="Public" Name="UpdatePayroll" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy41" UserSourceName="UpdatePayroll">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdatePayroll</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="date" DbType="Date" Direction="Input" ParameterName="@Дата" Precision="10" ProviderType="Date" Scale="0" Size="3" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_сотрудника" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Отработанные_часы" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Выплата" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdatePositions" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdatePositions" MethodsParameterType="CLR" Modifier="Public" Name="UpdatePositions" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy42" UserSourceName="UpdatePositions">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdatePositions</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@Наименование" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Почасовая_ставка" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdatePurchases" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdatePurchases" MethodsParameterType="CLR" Modifier="Public" Name="UpdatePurchases" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy43" UserSourceName="UpdatePurchases">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdatePurchases</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_товара" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_контрагента" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@Цена" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@Дата_закупки" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateQuantity" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateQuantity" MethodsParameterType="CLR" Modifier="Public" Name="UpdateQuantity" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy44" UserSourceName="UpdateQuantity">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateQuantity</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_склада" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_товара" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateRaw" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateRaw" MethodsParameterType="CLR" Modifier="Public" Name="UpdateRaw" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy45" UserSourceName="UpdateRaw">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateRaw</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_сырья" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@наименования" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateRawAccepting" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateRawAccepting" MethodsParameterType="CLR" Modifier="Public" Name="UpdateRawAccepting" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy46" UserSourceName="UpdateRawAccepting">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateRawAccepting</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_приёмки" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="datetime" DbType="DateTime" Direction="Input" ParameterName="@дата_приёмки" Precision="23" ProviderType="DateTime" Scale="3" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код_сырья" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@количество" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="inform_system_baseConnectionString (Settings)" DbObjectName="inform_system_base.dbo.UpdateStaff" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="UpdateStaff" MethodsParameterType="CLR" Modifier="Public" Name="UpdateStaff" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy47" UserSourceName="UpdateStaff">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.UpdateStaff</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@код" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@ФИО" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_должности" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Код_отдела" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="inform_system_baseDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="inform_system_baseDataSet1" msprop:Generator_DataSetName="inform_system_baseDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ПредставлениеБиблиотекаКниги" msprop:Generator_RowEvHandlerName="ПредставлениеБиблиотекаКнигиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеБиблиотекаКнигиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеБиблиотекаКнигиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеБиблиотекаКнигиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеБиблиотекаКниги" msprop:Generator_RowChangedName="ПредставлениеБиблиотекаКнигиRowChanged" msprop:Generator_RowChangingName="ПредставлениеБиблиотекаКнигиRowChanging" msprop:Generator_TableClassName="ПредставлениеБиблиотекаКнигиDataTable" msprop:Generator_RowClassName="ПредставлениеБиблиотекаКнигиRow" msprop:Generator_TableVarName="tableПредставлениеБиблиотекаКниги" msprop:Generator_UserTableName="ПредставлениеБиблиотекаКниги">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_книги" msprop:Generator_ColumnPropNameInRow="код_книги" msprop:Generator_ColumnPropNameInTable="код_книгиColumn" msprop:Generator_ColumnVarNameInTable="columnкод_книги" msprop:Generator_UserColumnName="код_книги" type="xs:int" />
+              <xs:element name="название_книги" msprop:Generator_ColumnPropNameInRow="название_книги" msprop:Generator_ColumnPropNameInTable="название_книгиColumn" msprop:Generator_ColumnVarNameInTable="columnназвание_книги" msprop:Generator_UserColumnName="название_книги" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="автор_книги" msprop:Generator_ColumnPropNameInRow="автор_книги" msprop:Generator_ColumnPropNameInTable="автор_книгиColumn" msprop:Generator_ColumnVarNameInTable="columnавтор_книги" msprop:Generator_UserColumnName="автор_книги" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="год_издания" msprop:Generator_ColumnPropNameInRow="год_издания" msprop:Generator_ColumnPropNameInTable="год_изданияColumn" msprop:Generator_ColumnVarNameInTable="columnгод_издания" msprop:Generator_UserColumnName="год_издания" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="id_типа_книги" msprop:Generator_ColumnPropNameInRow="id_типа_книги" msprop:Generator_ColumnPropNameInTable="id_типа_книгиColumn" msprop:Generator_ColumnVarNameInTable="columnid_типа_книги" msprop:Generator_UserColumnName="id_типа_книги" type="xs:int" minOccurs="0" />
+              <xs:element name="id_места_хранения" msprop:Generator_ColumnPropNameInRow="id_места_хранения" msprop:Generator_ColumnPropNameInTable="id_места_храненияColumn" msprop:Generator_ColumnVarNameInTable="columnid_места_хранения" msprop:Generator_UserColumnName="id_места_хранения" type="xs:int" minOccurs="0" />
+              <xs:element name="название_места" msprop:Generator_ColumnPropNameInRow="название_места" msprop:Generator_ColumnPropNameInTable="название_местаColumn" msprop:Generator_ColumnVarNameInTable="columnназвание_места" msprop:Generator_UserColumnName="название_места" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="название_типа" msprop:Generator_ColumnPropNameInRow="название_типа" msprop:Generator_ColumnPropNameInTable="название_типаColumn" msprop:Generator_ColumnVarNameInTable="columnназвание_типа" msprop:Generator_UserColumnName="название_типа" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеБиблиотекаМестаХранения" msprop:Generator_RowEvHandlerName="ПредставлениеБиблиотекаМестаХраненияRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеБиблиотекаМестаХраненияRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеБиблиотекаМестаХраненияRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеБиблиотекаМестаХраненияRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеБиблиотекаМестаХранения" msprop:Generator_RowChangedName="ПредставлениеБиблиотекаМестаХраненияRowChanged" msprop:Generator_RowChangingName="ПредставлениеБиблиотекаМестаХраненияRowChanging" msprop:Generator_TableClassName="ПредставлениеБиблиотекаМестаХраненияDataTable" msprop:Generator_RowClassName="ПредставлениеБиблиотекаМестаХраненияRow" msprop:Generator_TableVarName="tableПредставлениеБиблиотекаМестаХранения" msprop:Generator_UserTableName="ПредставлениеБиблиотекаМестаХранения">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_места_хранения" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="код_места_хранения" msprop:Generator_ColumnPropNameInTable="код_места_храненияColumn" msprop:Generator_ColumnVarNameInTable="columnкод_места_хранения" msprop:Generator_UserColumnName="код_места_хранения" type="xs:int" />
+              <xs:element name="название_места" msprop:Generator_ColumnPropNameInRow="название_места" msprop:Generator_ColumnPropNameInTable="название_местаColumn" msprop:Generator_ColumnVarNameInTable="columnназвание_места" msprop:Generator_UserColumnName="название_места" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеБиблиотекаТипыКниг" msprop:Generator_RowEvHandlerName="ПредставлениеБиблиотекаТипыКнигRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеБиблиотекаТипыКнигRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеБиблиотекаТипыКнигRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеБиблиотекаТипыКнигRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеБиблиотекаТипыКниг" msprop:Generator_RowChangedName="ПредставлениеБиблиотекаТипыКнигRowChanged" msprop:Generator_RowChangingName="ПредставлениеБиблиотекаТипыКнигRowChanging" msprop:Generator_TableClassName="ПредставлениеБиблиотекаТипыКнигDataTable" msprop:Generator_RowClassName="ПредставлениеБиблиотекаТипыКнигRow" msprop:Generator_TableVarName="tableПредставлениеБиблиотекаТипыКниг" msprop:Generator_UserTableName="ПредставлениеБиблиотекаТипыКниг">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_типа_книг" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="код_типа_книг" msprop:Generator_ColumnPropNameInTable="код_типа_книгColumn" msprop:Generator_ColumnVarNameInTable="columnкод_типа_книг" msprop:Generator_UserColumnName="код_типа_книг" type="xs:int" />
+              <xs:element name="название_типа" msprop:Generator_ColumnPropNameInRow="название_типа" msprop:Generator_ColumnPropNameInTable="название_типаColumn" msprop:Generator_ColumnVarNameInTable="columnназвание_типа" msprop:Generator_UserColumnName="название_типа" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеВыпуск_Деталей" msprop:Generator_RowEvHandlerName="ПредставлениеВыпуск_ДеталейRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеВыпуск_ДеталейRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеВыпуск_ДеталейRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеВыпуск_ДеталейRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеВыпуск_Деталей" msprop:Generator_RowChangedName="ПредставлениеВыпуск_ДеталейRowChanged" msprop:Generator_RowChangingName="ПредставлениеВыпуск_ДеталейRowChanging" msprop:Generator_TableClassName="ПредставлениеВыпуск_ДеталейDataTable" msprop:Generator_RowClassName="ПредставлениеВыпуск_ДеталейRow" msprop:Generator_TableVarName="tableПредставлениеВыпуск_Деталей" msprop:Generator_UserTableName="ПредставлениеВыпуск_Деталей">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_x0020_детали" msprop:Generator_ColumnPropNameInRow="Код_детали" msprop:Generator_ColumnPropNameInTable="Код_деталиColumn" msprop:Generator_ColumnVarNameInTable="columnКод_детали" msprop:Generator_UserColumnName="Код детали" type="xs:int" minOccurs="0" />
+              <xs:element name="Дата_x0020_выпуска" msprop:Generator_ColumnPropNameInRow="Дата_выпуска" msprop:Generator_ColumnPropNameInTable="Дата_выпускаColumn" msprop:Generator_ColumnVarNameInTable="columnДата_выпуска" msprop:Generator_UserColumnName="Дата выпуска" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеДеталиКузовногоЦеха" msprop:Generator_RowEvHandlerName="ПредставлениеДеталиКузовногоЦехаRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеДеталиКузовногоЦехаRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеДеталиКузовногоЦехаRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеДеталиКузовногоЦехаRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеДеталиКузовногоЦеха" msprop:Generator_RowChangedName="ПредставлениеДеталиКузовногоЦехаRowChanged" msprop:Generator_RowChangingName="ПредставлениеДеталиКузовногоЦехаRowChanging" msprop:Generator_TableClassName="ПредставлениеДеталиКузовногоЦехаDataTable" msprop:Generator_RowClassName="ПредставлениеДеталиКузовногоЦехаRow" msprop:Generator_TableVarName="tableПредставлениеДеталиКузовногоЦеха" msprop:Generator_UserTableName="ПредставлениеДеталиКузовногоЦеха">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_x0020_детали" msprop:Generator_ColumnPropNameInRow="Код_детали" msprop:Generator_ColumnPropNameInTable="Код_деталиColumn" msprop:Generator_ColumnVarNameInTable="columnКод_детали" msprop:Generator_UserColumnName="Код детали" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Название" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеДоговоры_с_контрагентами" msprop:Generator_RowEvHandlerName="ПредставлениеДоговоры_с_контрагентамиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеДоговоры_с_контрагентамиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеДоговоры_с_контрагентамиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеДоговоры_с_контрагентамиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеДоговоры_с_контрагентами" msprop:Generator_RowChangedName="ПредставлениеДоговоры_с_контрагентамиRowChanged" msprop:Generator_RowChangingName="ПредставлениеДоговоры_с_контрагентамиRowChanging" msprop:Generator_TableClassName="ПредставлениеДоговоры_с_контрагентамиDataTable" msprop:Generator_RowClassName="ПредставлениеДоговоры_с_контрагентамиRow" msprop:Generator_TableVarName="tableПредставлениеДоговоры_с_контрагентами" msprop:Generator_UserTableName="ПредставлениеДоговоры_с_контрагентами">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_контрагента" msprop:Generator_ColumnPropNameInRow="Код_контрагента" msprop:Generator_ColumnPropNameInTable="Код_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_контрагента" msprop:Generator_UserColumnName="Код_контрагента" type="xs:int" minOccurs="0" />
+              <xs:element name="Номер_договора" msprop:Generator_ColumnPropNameInRow="Номер_договора" msprop:Generator_ColumnPropNameInTable="Номер_договораColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_договора" msprop:Generator_UserColumnName="Номер_договора" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Договор_подписан" msprop:Generator_ColumnPropNameInRow="Договор_подписан" msprop:Generator_ColumnPropNameInTable="Договор_подписанColumn" msprop:Generator_ColumnVarNameInTable="columnДоговор_подписан" msprop:Generator_UserColumnName="Договор_подписан" type="xs:boolean" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеДолжности" msprop:Generator_RowEvHandlerName="ПредставлениеДолжностиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеДолжностиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеДолжностиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеДолжностиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеДолжности" msprop:Generator_RowChangedName="ПредставлениеДолжностиRowChanged" msprop:Generator_RowChangingName="ПредставлениеДолжностиRowChanging" msprop:Generator_TableClassName="ПредставлениеДолжностиDataTable" msprop:Generator_RowClassName="ПредставлениеДолжностиRow" msprop:Generator_TableVarName="tableПредставлениеДолжности" msprop:Generator_UserTableName="ПредставлениеДолжности">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеЖалобы_от_клиентов" msprop:Generator_RowEvHandlerName="ПредставлениеЖалобы_от_клиентовRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеЖалобы_от_клиентовRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеЖалобы_от_клиентовRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеЖалобы_от_клиентовRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеЖалобы_от_клиентов" msprop:Generator_RowChangedName="ПредставлениеЖалобы_от_клиентовRowChanged" msprop:Generator_RowChangingName="ПредставлениеЖалобы_от_клиентовRowChanging" msprop:Generator_TableClassName="ПредставлениеЖалобы_от_клиентовDataTable" msprop:Generator_RowClassName="ПредставлениеЖалобы_от_клиентовRow" msprop:Generator_TableVarName="tableПредставлениеЖалобы_от_клиентов" msprop:Generator_UserTableName="ПредставлениеЖалобы_от_клиентов">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_контрагента" msprop:Generator_ColumnPropNameInRow="Код_контрагента" msprop:Generator_ColumnPropNameInTable="Код_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_контрагента" msprop:Generator_UserColumnName="Код_контрагента" type="xs:int" minOccurs="0" />
+              <xs:element name="Жалоба_рассмотрена" msprop:Generator_ColumnPropNameInRow="Жалоба_рассмотрена" msprop:Generator_ColumnPropNameInTable="Жалоба_рассмотренаColumn" msprop:Generator_ColumnVarNameInTable="columnЖалоба_рассмотрена" msprop:Generator_UserColumnName="Жалоба_рассмотрена" type="xs:boolean" />
+              <xs:element name="Дата_жалобы" msprop:Generator_ColumnPropNameInRow="Дата_жалобы" msprop:Generator_ColumnPropNameInTable="Дата_жалобыColumn" msprop:Generator_ColumnVarNameInTable="columnДата_жалобы" msprop:Generator_UserColumnName="Дата_жалобы" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Текст_жалобы" msprop:Generator_ColumnPropNameInRow="Текст_жалобы" msprop:Generator_ColumnPropNameInTable="Текст_жалобыColumn" msprop:Generator_ColumnVarNameInTable="columnТекст_жалобы" msprop:Generator_UserColumnName="Текст_жалобы" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеЗаказы" msprop:Generator_RowEvHandlerName="ПредставлениеЗаказыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеЗаказыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеЗаказыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеЗаказыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеЗаказы" msprop:Generator_RowChangedName="ПредставлениеЗаказыRowChanged" msprop:Generator_RowChangingName="ПредставлениеЗаказыRowChanging" msprop:Generator_TableClassName="ПредставлениеЗаказыDataTable" msprop:Generator_RowClassName="ПредставлениеЗаказыRow" msprop:Generator_TableVarName="tableПредставлениеЗаказы" msprop:Generator_UserTableName="ПредставлениеЗаказы">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_заказа" msprop:Generator_ColumnPropNameInRow="код_заказа" msprop:Generator_ColumnPropNameInTable="код_заказаColumn" msprop:Generator_ColumnVarNameInTable="columnкод_заказа" msprop:Generator_UserColumnName="код_заказа" type="xs:int" />
+              <xs:element name="код_контагента" msprop:Generator_ColumnPropNameInRow="код_контагента" msprop:Generator_ColumnPropNameInTable="код_контагентаColumn" msprop:Generator_ColumnVarNameInTable="columnкод_контагента" msprop:Generator_UserColumnName="код_контагента" type="xs:int" minOccurs="0" />
+              <xs:element name="код_оплаты" msprop:Generator_ColumnPropNameInRow="код_оплаты" msprop:Generator_ColumnPropNameInTable="код_оплатыColumn" msprop:Generator_ColumnVarNameInTable="columnкод_оплаты" msprop:Generator_UserColumnName="код_оплаты" type="xs:int" minOccurs="0" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ИНН" msprop:Generator_ColumnPropNameInRow="ИНН" msprop:Generator_ColumnPropNameInTable="ИННColumn" msprop:Generator_ColumnVarNameInTable="columnИНН" msprop:Generator_UserColumnName="ИНН" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Телефон" msprop:Generator_ColumnPropNameInRow="Телефон" msprop:Generator_ColumnPropNameInTable="ТелефонColumn" msprop:Generator_ColumnVarNameInTable="columnТелефон" msprop:Generator_UserColumnName="Телефон" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Адрес" msprop:Generator_ColumnPropNameInRow="Адрес" msprop:Generator_ColumnPropNameInTable="АдресColumn" msprop:Generator_ColumnVarNameInTable="columnАдрес" msprop:Generator_UserColumnName="Адрес" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="сумма" msprop:Generator_ColumnPropNameInRow="сумма" msprop:Generator_ColumnPropNameInTable="суммаColumn" msprop:Generator_ColumnVarNameInTable="columnсумма" msprop:Generator_UserColumnName="сумма" type="xs:decimal" minOccurs="0" />
+              <xs:element name="дата" msprop:Generator_ColumnPropNameInRow="дата" msprop:Generator_ColumnPropNameInTable="датаColumn" msprop:Generator_ColumnVarNameInTable="columnдата" msprop:Generator_UserColumnName="дата" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеЗакупки" msprop:Generator_RowEvHandlerName="ПредставлениеЗакупкиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеЗакупкиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеЗакупкиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеЗакупкиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеЗакупки" msprop:Generator_RowChangedName="ПредставлениеЗакупкиRowChanged" msprop:Generator_RowChangingName="ПредставлениеЗакупкиRowChanging" msprop:Generator_TableClassName="ПредставлениеЗакупкиDataTable" msprop:Generator_RowClassName="ПредставлениеЗакупкиRow" msprop:Generator_TableVarName="tableПредставлениеЗакупки" msprop:Generator_UserTableName="ПредставлениеЗакупки">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_товара" msprop:Generator_ColumnPropNameInRow="Код_товара" msprop:Generator_ColumnPropNameInTable="Код_товараColumn" msprop:Generator_ColumnVarNameInTable="columnКод_товара" msprop:Generator_UserColumnName="Код_товара" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_контрагента" msprop:Generator_ColumnPropNameInRow="Код_контрагента" msprop:Generator_ColumnPropNameInTable="Код_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_контрагента" msprop:Generator_UserColumnName="Код_контрагента" type="xs:int" minOccurs="0" />
+              <xs:element name="Количество" msprop:Generator_ColumnPropNameInRow="Количество" msprop:Generator_ColumnPropNameInTable="КоличествоColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество" msprop:Generator_UserColumnName="Количество" type="xs:int" minOccurs="0" />
+              <xs:element name="Цена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_UserColumnName="Цена" type="xs:double" minOccurs="0" />
+              <xs:element name="Дата_закупки" msprop:Generator_ColumnPropNameInRow="Дата_закупки" msprop:Generator_ColumnPropNameInTable="Дата_закупкиColumn" msprop:Generator_ColumnVarNameInTable="columnДата_закупки" msprop:Generator_UserColumnName="Дата_закупки" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Наименование_x0020_контрагента" msprop:Generator_ColumnPropNameInRow="Наименование_контрагента" msprop:Generator_ColumnPropNameInTable="Наименование_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_контрагента" msprop:Generator_UserColumnName="Наименование контрагента" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Наименование_x0020_товара" msprop:Generator_ColumnPropNameInRow="Наименование_товара" msprop:Generator_ColumnPropNameInTable="Наименование_товараColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_товара" msprop:Generator_UserColumnName="Наименование товара">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеЗакупки_1" msprop:Generator_RowEvHandlerName="ПредставлениеЗакупки_1RowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеЗакупки_1RowDeleted" msprop:Generator_RowDeletingName="ПредставлениеЗакупки_1RowDeleting" msprop:Generator_RowEvArgName="ПредставлениеЗакупки_1RowChangeEvent" msprop:Generator_TablePropName="ПредставлениеЗакупки_1" msprop:Generator_RowChangedName="ПредставлениеЗакупки_1RowChanged" msprop:Generator_RowChangingName="ПредставлениеЗакупки_1RowChanging" msprop:Generator_TableClassName="ПредставлениеЗакупки_1DataTable" msprop:Generator_RowClassName="ПредставлениеЗакупки_1Row" msprop:Generator_TableVarName="tableПредставлениеЗакупки_1" msprop:Generator_UserTableName="ПредставлениеЗакупки_1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_товара" msprop:Generator_ColumnPropNameInRow="Код_товара" msprop:Generator_ColumnPropNameInTable="Код_товараColumn" msprop:Generator_ColumnVarNameInTable="columnКод_товара" msprop:Generator_UserColumnName="Код_товара" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_контрагента" msprop:Generator_ColumnPropNameInRow="Код_контрагента" msprop:Generator_ColumnPropNameInTable="Код_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_контрагента" msprop:Generator_UserColumnName="Код_контрагента" type="xs:int" minOccurs="0" />
+              <xs:element name="Количество" msprop:Generator_ColumnPropNameInRow="Количество" msprop:Generator_ColumnPropNameInTable="КоличествоColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество" msprop:Generator_UserColumnName="Количество" type="xs:int" minOccurs="0" />
+              <xs:element name="Цена" msprop:Generator_ColumnPropNameInRow="Цена" msprop:Generator_ColumnPropNameInTable="ЦенаColumn" msprop:Generator_ColumnVarNameInTable="columnЦена" msprop:Generator_UserColumnName="Цена" type="xs:double" minOccurs="0" />
+              <xs:element name="Дата_закупки" msprop:Generator_ColumnPropNameInRow="Дата_закупки" msprop:Generator_ColumnPropNameInTable="Дата_закупкиColumn" msprop:Generator_ColumnVarNameInTable="columnДата_закупки" msprop:Generator_UserColumnName="Дата_закупки" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Наименование_x0020_контрагента" msprop:Generator_ColumnPropNameInRow="Наименование_контрагента" msprop:Generator_ColumnPropNameInTable="Наименование_контрагентаColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_контрагента" msprop:Generator_UserColumnName="Наименование контрагента" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Наименование_x0020_товара" msprop:Generator_ColumnPropNameInRow="Наименование_товара" msprop:Generator_ColumnPropNameInTable="Наименование_товараColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_товара" msprop:Generator_UserColumnName="Наименование товара">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеКонтрагенты" msprop:Generator_RowEvHandlerName="ПредставлениеКонтрагентыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеКонтрагентыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеКонтрагентыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеКонтрагентыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеКонтрагенты" msprop:Generator_RowChangedName="ПредставлениеКонтрагентыRowChanged" msprop:Generator_RowChangingName="ПредставлениеКонтрагентыRowChanging" msprop:Generator_TableClassName="ПредставлениеКонтрагентыDataTable" msprop:Generator_RowClassName="ПредставлениеКонтрагентыRow" msprop:Generator_TableVarName="tableПредставлениеКонтрагенты" msprop:Generator_UserTableName="ПредставлениеКонтрагенты">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ИНН" msprop:Generator_ColumnPropNameInRow="ИНН" msprop:Generator_ColumnPropNameInTable="ИННColumn" msprop:Generator_ColumnVarNameInTable="columnИНН" msprop:Generator_UserColumnName="ИНН" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Телефон" msprop:Generator_ColumnPropNameInRow="Телефон" msprop:Generator_ColumnPropNameInTable="ТелефонColumn" msprop:Generator_ColumnVarNameInTable="columnТелефон" msprop:Generator_UserColumnName="Телефон" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Адрес" msprop:Generator_ColumnPropNameInRow="Адрес" msprop:Generator_ColumnPropNameInTable="АдресColumn" msprop:Generator_ColumnVarNameInTable="columnАдрес" msprop:Generator_UserColumnName="Адрес" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеОплаты" msprop:Generator_RowEvHandlerName="ПредставлениеОплатыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеОплатыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеОплатыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеОплатыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеОплаты" msprop:Generator_RowChangedName="ПредставлениеОплатыRowChanged" msprop:Generator_RowChangingName="ПредставлениеОплатыRowChanging" msprop:Generator_TableClassName="ПредставлениеОплатыDataTable" msprop:Generator_RowClassName="ПредставлениеОплатыRow" msprop:Generator_TableVarName="tableПредставлениеОплаты" msprop:Generator_UserTableName="ПредставлениеОплаты">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_оплаты" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="код_оплаты" msprop:Generator_ColumnPropNameInTable="код_оплатыColumn" msprop:Generator_ColumnVarNameInTable="columnкод_оплаты" msprop:Generator_UserColumnName="код_оплаты" type="xs:int" />
+              <xs:element name="сумма" msprop:Generator_ColumnPropNameInRow="сумма" msprop:Generator_ColumnPropNameInTable="суммаColumn" msprop:Generator_ColumnVarNameInTable="columnсумма" msprop:Generator_UserColumnName="сумма" type="xs:decimal" minOccurs="0" />
+              <xs:element name="дата" msprop:Generator_ColumnPropNameInRow="дата" msprop:Generator_ColumnPropNameInTable="датаColumn" msprop:Generator_ColumnVarNameInTable="columnдата" msprop:Generator_UserColumnName="дата" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеОстатки_на_складах" msprop:Generator_RowEvHandlerName="ПредставлениеОстатки_на_складахRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеОстатки_на_складахRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеОстатки_на_складахRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеОстатки_на_складахRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеОстатки_на_складах" msprop:Generator_RowChangedName="ПредставлениеОстатки_на_складахRowChanged" msprop:Generator_RowChangingName="ПредставлениеОстатки_на_складахRowChanging" msprop:Generator_TableClassName="ПредставлениеОстатки_на_складахDataTable" msprop:Generator_RowClassName="ПредставлениеОстатки_на_складахRow" msprop:Generator_TableVarName="tableПредставлениеОстатки_на_складах" msprop:Generator_UserTableName="ПредставлениеОстатки_на_складах">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Наименование_x0020_склада" msprop:Generator_ColumnPropNameInRow="Наименование_склада" msprop:Generator_ColumnPropNameInTable="Наименование_складаColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_склада" msprop:Generator_UserColumnName="Наименование склада" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Наименование_x0020_товара" msprop:Generator_ColumnPropNameInRow="Наименование_товара" msprop:Generator_ColumnPropNameInTable="Наименование_товараColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование_товара" msprop:Generator_UserColumnName="Наименование товара">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Количество_x0020_товара" msprop:Generator_ColumnPropNameInRow="Количество_товара" msprop:Generator_ColumnPropNameInTable="Количество_товараColumn" msprop:Generator_ColumnVarNameInTable="columnКоличество_товара" msprop:Generator_UserColumnName="Количество товара" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_склада" msprop:Generator_ColumnPropNameInRow="Код_склада" msprop:Generator_ColumnPropNameInTable="Код_складаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_склада" msprop:Generator_UserColumnName="Код_склада" type="xs:int" minOccurs="0" />
+              <xs:element name="Код_товара" msprop:Generator_ColumnPropNameInRow="Код_товара" msprop:Generator_ColumnPropNameInTable="Код_товараColumn" msprop:Generator_ColumnVarNameInTable="columnКод_товара" msprop:Generator_UserColumnName="Код_товара" type="xs:int" minOccurs="0" />
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеОтделы" msprop:Generator_RowEvHandlerName="ПредставлениеОтделыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеОтделыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеОтделыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеОтделыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеОтделы" msprop:Generator_RowChangedName="ПредставлениеОтделыRowChanged" msprop:Generator_RowChangingName="ПредставлениеОтделыRowChanging" msprop:Generator_TableClassName="ПредставлениеОтделыDataTable" msprop:Generator_RowClassName="ПредставлениеОтделыRow" msprop:Generator_TableVarName="tableПредставлениеОтделы" msprop:Generator_UserTableName="ПредставлениеОтделы">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_UserColumnName="id" type="xs:int" />
+              <xs:element name="department_name" msprop:Generator_ColumnPropNameInRow="department_name" msprop:Generator_ColumnPropNameInTable="department_nameColumn" msprop:Generator_ColumnVarNameInTable="columndepartment_name" msprop:Generator_UserColumnName="department_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеПриемкаСырья" msprop:Generator_RowEvHandlerName="ПредставлениеПриемкаСырьяRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеПриемкаСырьяRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеПриемкаСырьяRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеПриемкаСырьяRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеПриемкаСырья" msprop:Generator_RowChangedName="ПредставлениеПриемкаСырьяRowChanged" msprop:Generator_RowChangingName="ПредставлениеПриемкаСырьяRowChanging" msprop:Generator_TableClassName="ПредставлениеПриемкаСырьяDataTable" msprop:Generator_RowClassName="ПредставлениеПриемкаСырьяRow" msprop:Generator_TableVarName="tableПредставлениеПриемкаСырья" msprop:Generator_UserTableName="ПредставлениеПриемкаСырья">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="наименования" msprop:Generator_ColumnPropNameInRow="наименования" msprop:Generator_ColumnPropNameInTable="наименованияColumn" msprop:Generator_ColumnVarNameInTable="columnнаименования" msprop:Generator_UserColumnName="наименования" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="дата_приёмки" msprop:Generator_ColumnPropNameInRow="дата_приёмки" msprop:Generator_ColumnPropNameInTable="дата_приёмкиColumn" msprop:Generator_ColumnVarNameInTable="columnдата_приёмки" msprop:Generator_UserColumnName="дата_приёмки" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="количество" msprop:Generator_ColumnPropNameInRow="количество" msprop:Generator_ColumnPropNameInTable="количествоColumn" msprop:Generator_ColumnVarNameInTable="columnколичество" msprop:Generator_UserColumnName="количество" type="xs:int" minOccurs="0" />
+              <xs:element name="код_приёмки" msprop:Generator_ColumnPropNameInRow="код_приёмки" msprop:Generator_ColumnPropNameInTable="код_приёмкиColumn" msprop:Generator_ColumnVarNameInTable="columnкод_приёмки" msprop:Generator_UserColumnName="код_приёмки" type="xs:int" />
+              <xs:element name="код_сырья" msprop:Generator_ColumnPropNameInRow="код_сырья" msprop:Generator_ColumnPropNameInTable="код_сырьяColumn" msprop:Generator_ColumnVarNameInTable="columnкод_сырья" msprop:Generator_UserColumnName="код_сырья" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеРасчетные_ведомости" msprop:Generator_RowEvHandlerName="ПредставлениеРасчетные_ведомостиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеРасчетные_ведомостиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеРасчетные_ведомостиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеРасчетные_ведомостиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеРасчетные_ведомости" msprop:Generator_RowChangedName="ПредставлениеРасчетные_ведомостиRowChanged" msprop:Generator_RowChangingName="ПредставлениеРасчетные_ведомостиRowChanging" msprop:Generator_TableClassName="ПредставлениеРасчетные_ведомостиDataTable" msprop:Generator_RowClassName="ПредставлениеРасчетные_ведомостиRow" msprop:Generator_TableVarName="tableПредставлениеРасчетные_ведомости" msprop:Generator_UserTableName="ПредставлениеРасчетные_ведомости">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Дата" msprop:Generator_ColumnPropNameInRow="Дата" msprop:Generator_ColumnPropNameInTable="ДатаColumn" msprop:Generator_ColumnVarNameInTable="columnДата" msprop:Generator_UserColumnName="Дата" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Код_сотрудника" msprop:Generator_ColumnPropNameInRow="Код_сотрудника" msprop:Generator_ColumnPropNameInTable="Код_сотрудникаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_сотрудника" msprop:Generator_UserColumnName="Код_сотрудника" type="xs:int" minOccurs="0" />
+              <xs:element name="ФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_UserColumnName="ФИО" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Отработанные_часы" msprop:Generator_ColumnPropNameInRow="Отработанные_часы" msprop:Generator_ColumnPropNameInTable="Отработанные_часыColumn" msprop:Generator_ColumnVarNameInTable="columnОтработанные_часы" msprop:Generator_UserColumnName="Отработанные_часы" type="xs:int" minOccurs="0" />
+              <xs:element name="Выплата" msprop:Generator_ColumnPropNameInRow="Выплата" msprop:Generator_ColumnPropNameInTable="ВыплатаColumn" msprop:Generator_ColumnVarNameInTable="columnВыплата" msprop:Generator_UserColumnName="Выплата" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеСклады" msprop:Generator_RowEvHandlerName="ПредставлениеСкладыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеСкладыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеСкладыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеСкладыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеСклады" msprop:Generator_RowChangedName="ПредставлениеСкладыRowChanged" msprop:Generator_RowChangingName="ПредставлениеСкладыRowChanging" msprop:Generator_TableClassName="ПредставлениеСкладыDataTable" msprop:Generator_RowClassName="ПредставлениеСкладыRow" msprop:Generator_TableVarName="tableПредставлениеСклады" msprop:Generator_UserTableName="ПредставлениеСклады">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеСотрудники" msprop:Generator_RowEvHandlerName="ПредставлениеСотрудникиRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеСотрудникиRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеСотрудникиRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеСотрудникиRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеСотрудники" msprop:Generator_RowChangedName="ПредставлениеСотрудникиRowChanged" msprop:Generator_RowChangingName="ПредставлениеСотрудникиRowChanging" msprop:Generator_TableClassName="ПредставлениеСотрудникиDataTable" msprop:Generator_RowClassName="ПредставлениеСотрудникиRow" msprop:Generator_TableVarName="tableПредставлениеСотрудники" msprop:Generator_UserTableName="ПредставлениеСотрудники">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="ФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_UserColumnName="ФИО" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Код_должности" msprop:Generator_ColumnPropNameInRow="Код_должности" msprop:Generator_ColumnPropNameInTable="Код_должностиColumn" msprop:Generator_ColumnVarNameInTable="columnКод_должности" msprop:Generator_UserColumnName="Код_должности" type="xs:int" minOccurs="0" />
+              <xs:element name="Наименование" msprop:Generator_ColumnPropNameInRow="Наименование" msprop:Generator_ColumnPropNameInTable="НаименованиеColumn" msprop:Generator_ColumnVarNameInTable="columnНаименование" msprop:Generator_UserColumnName="Наименование" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Код_отдела" msprop:Generator_ColumnPropNameInRow="Код_отдела" msprop:Generator_ColumnPropNameInTable="Код_отделаColumn" msprop:Generator_ColumnVarNameInTable="columnКод_отдела" msprop:Generator_UserColumnName="Код_отдела" type="xs:int" minOccurs="0" />
+              <xs:element name="department_name" msprop:Generator_ColumnPropNameInRow="department_name" msprop:Generator_ColumnPropNameInTable="department_nameColumn" msprop:Generator_ColumnVarNameInTable="columndepartment_name" msprop:Generator_UserColumnName="department_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеСырьё" msprop:Generator_RowEvHandlerName="ПредставлениеСырьёRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеСырьёRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеСырьёRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеСырьёRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеСырьё" msprop:Generator_RowChangedName="ПредставлениеСырьёRowChanged" msprop:Generator_RowChangingName="ПредставлениеСырьёRowChanging" msprop:Generator_TableClassName="ПредставлениеСырьёDataTable" msprop:Generator_RowClassName="ПредставлениеСырьёRow" msprop:Generator_TableVarName="tableПредставлениеСырьё" msprop:Generator_UserTableName="ПредставлениеСырьё">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="код_сырья" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="код_сырья" msprop:Generator_ColumnPropNameInTable="код_сырьяColumn" msprop:Generator_ColumnVarNameInTable="columnкод_сырья" msprop:Generator_UserColumnName="код_сырья" type="xs:int" />
+              <xs:element name="наименования" msprop:Generator_ColumnPropNameInRow="наименования" msprop:Generator_ColumnPropNameInTable="наименованияColumn" msprop:Generator_ColumnVarNameInTable="columnнаименования" msprop:Generator_UserColumnName="наименования" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ПредставлениеТовары" msprop:Generator_RowEvHandlerName="ПредставлениеТоварыRowChangeEventHandler" msprop:Generator_RowDeletedName="ПредставлениеТоварыRowDeleted" msprop:Generator_RowDeletingName="ПредставлениеТоварыRowDeleting" msprop:Generator_RowEvArgName="ПредставлениеТоварыRowChangeEvent" msprop:Generator_TablePropName="ПредставлениеТовары" msprop:Generator_RowChangedName="ПредставлениеТоварыRowChanged" msprop:Generator_RowChangingName="ПредставлениеТоварыRowChanging" msprop:Generator_TableClassName="ПредставлениеТоварыDataTable" msprop:Generator_RowClassName="ПредставлениеТоварыRow" msprop:Generator_TableVarName="tableПредставлениеТовары" msprop:Generator_UserTableName="ПредставлениеТовары">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Название" msprop:Generator_ColumnPropNameInRow="Название" msprop:Generator_ColumnPropNameInTable="НазваниеColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание" msprop:Generator_UserColumnName="Название">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеБиблиотекаКниги" />
+      <xs:field xpath="mstns:код_книги" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеБиблиотекаМестаХранения_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеБиблиотекаМестаХранения" />
+      <xs:field xpath="mstns:код_места_хранения" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеБиблиотекаТипыКниг_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеБиблиотекаТипыКниг" />
+      <xs:field xpath="mstns:код_типа_книг" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеВыпуск_Деталей_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеВыпуск_Деталей" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеДеталиКузовногоЦеха_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеДеталиКузовногоЦеха" />
+      <xs:field xpath="mstns:Код_x0020_детали" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеДоговоры_с_контрагентами_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеДоговоры_с_контрагентами" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеЖалобы_от_клиентов_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеЖалобы_от_клиентов" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеЗаказы_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеЗаказы" />
+      <xs:field xpath="mstns:код_заказа" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеЗакупки_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеЗакупки" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеЗакупки_1_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеЗакупки_1" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеКонтрагенты_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеКонтрагенты" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеОплаты_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеОплаты" />
+      <xs:field xpath="mstns:код_оплаты" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеОстатки_на_складах_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеОстатки_на_складах" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеОтделы_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеОтделы" />
+      <xs:field xpath="mstns:id" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеПриемкаСырья_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеПриемкаСырья" />
+      <xs:field xpath="mstns:код_приёмки" />
+      <xs:field xpath="mstns:код_сырья" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеРасчетные_ведомости_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеРасчетные_ведомости" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеСклады_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеСклады" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеСотрудники_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеСотрудники" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеСырьё_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеСырьё" />
+      <xs:field xpath="mstns:код_сырья" />
+    </xs:unique>
+    <xs:unique name="ПредставлениеТовары_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ПредставлениеТовары" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
