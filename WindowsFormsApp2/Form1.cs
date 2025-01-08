@@ -25,6 +25,8 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСырьё". При необходимости она может быть перемещена или удалена.
+            this.представлениеСырьёTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСырьё);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеОплаты". При необходимости она может быть перемещена или удалена.
             this.представлениеОплатыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОплаты);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеЗаказы". При необходимости она может быть перемещена или удалена.
@@ -1439,6 +1441,89 @@ namespace WindowsFormsApp2
                 int id = (int)drv["код_заказа"];
                 queriesTableAdapter.DeleteOrder(id);
                 this.представлениеЗаказыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеЗаказы);
+            }
+        }
+
+        private void toolStripButtonRawAdd_Click(object sender, EventArgs e)
+        {
+            String name = this.textBoxRawName.Text;
+
+            queriesTableAdapter.CreateRaw(name);
+
+            this.представлениеСырьёTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСырьё);
+
+        }
+
+        private void toolStripButtonRawUpdate_Click(object sender, EventArgs e)
+        {
+            String name = this.textBoxRawName.Text;
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеСырьёBindingSource.Current;
+            id = (int) drv["код_сырья"];
+
+            queriesTableAdapter.UpdateRaw(id, name);
+
+            this.представлениеСырьёTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСырьё);
+
+        }
+
+        private void toolStripButtonRawDelete_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеСырьёBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеСырьёBindingSource.Current;
+                int id = (int)drv["код_сырья"];
+                queriesTableAdapter.DeleteRaw(id);
+                this.представлениеСырьёTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСырьё);
+            }
+        }
+
+        private void toolStripButtonRawAccecingAdd_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView raw = (System.Data.DataRowView)this.comboBoxRawAccecingRaw.SelectedValue;
+            Int32 id_raw = Convert.ToInt32(raw.Row[0]);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerRawAccecing.Text);
+            Int32 quantity = Convert.ToInt32(this.textBoxRawAccecingQuantity.Text);
+
+
+            queriesTableAdapter.CreateRawAccepting(date, id_raw, quantity);
+
+            this.представлениеПриемкаСырьяTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеПриемкаСырья);
+        }
+
+        private void toolStripButtonRawAccecingUpdate_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView raw = (System.Data.DataRowView)this.comboBoxRawAccecingRaw.SelectedValue;
+            Int32 id_raw = Convert.ToInt32(raw.Row[0]);
+            DateTime date = Convert.ToDateTime(this.dateTimePickerRawAccecing.Text);
+            Int32 quantity = Convert.ToInt32(this.textBoxRawAccecingQuantity.Text);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеПриемкаСырьяBindingSource.Current;
+            id = (int)drv["код_приёмки"];
+
+            queriesTableAdapter.UpdateRawAccepting(id, date, id_raw, quantity);
+
+            this.представлениеПриемкаСырьяTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеПриемкаСырья);
+
+        }
+
+        private void toolStripButtonRawAccecingDelete_Click(object sender, EventArgs e)
+        {
+
+            DataRowView drv;
+            int i = представлениеПриемкаСырьяBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеПриемкаСырьяBindingSource.Current;
+                int id = (int)drv["код_приёмки"];
+                queriesTableAdapter.DeleteRawAccepting(id);
+                this.представлениеПриемкаСырьяTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеПриемкаСырья);
             }
         }
     }
