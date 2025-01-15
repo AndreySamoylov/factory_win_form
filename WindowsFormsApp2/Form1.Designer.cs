@@ -727,7 +727,6 @@
             // 
             // textBoxRawAccecingQuantity
             // 
-            this.textBoxRawAccecingQuantity.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеПриемкаСырьяBindingSource, "количество", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.textBoxRawAccecingQuantity.Location = new System.Drawing.Point(16, 106);
             this.textBoxRawAccecingQuantity.Name = "textBoxRawAccecingQuantity";
             this.textBoxRawAccecingQuantity.Size = new System.Drawing.Size(189, 20);
@@ -735,7 +734,6 @@
             // 
             // dateTimePickerRawAccecing
             // 
-            this.dateTimePickerRawAccecing.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеПриемкаСырьяBindingSource, "дата_приёмки", true, System.Windows.Forms.DataSourceUpdateMode.Never));
             this.dateTimePickerRawAccecing.Location = new System.Drawing.Point(14, 67);
             this.dateTimePickerRawAccecing.Name = "dateTimePickerRawAccecing";
             this.dateTimePickerRawAccecing.Size = new System.Drawing.Size(191, 20);
@@ -743,8 +741,6 @@
             // 
             // comboBoxRawAccecingRaw
             // 
-            this.comboBoxRawAccecingRaw.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.представлениеПриемкаСырьяBindingSource, "код_сырья", true));
-            this.comboBoxRawAccecingRaw.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеПриемкаСырьяBindingSource, "наименования", true));
             this.comboBoxRawAccecingRaw.DataSource = this.представлениеСырьёBindingSource;
             this.comboBoxRawAccecingRaw.DisplayMember = "наименования";
             this.comboBoxRawAccecingRaw.FormattingEnabled = true;
@@ -892,7 +888,7 @@
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
             this.tabPage23.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage23.Size = new System.Drawing.Size(1118, 395);
+            this.tabPage23.Size = new System.Drawing.Size(1116, 393);
             this.tabPage23.TabIndex = 1;
             this.tabPage23.Text = "Сырьё";
             this.tabPage23.UseVisualStyleBackColor = true;
@@ -909,7 +905,7 @@
             this.dataGridView9.Location = new System.Drawing.Point(203, 30);
             this.dataGridView9.Name = "dataGridView9";
             this.dataGridView9.RowHeadersWidth = 51;
-            this.dataGridView9.Size = new System.Drawing.Size(912, 362);
+            this.dataGridView9.Size = new System.Drawing.Size(910, 360);
             this.dataGridView9.TabIndex = 2;
             // 
             // кодсырьяDataGridViewTextBoxColumn
@@ -937,12 +933,11 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(3, 30);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(200, 362);
+            this.panel9.Size = new System.Drawing.Size(200, 360);
             this.panel9.TabIndex = 1;
             // 
             // textBoxRawName
             // 
-            this.textBoxRawName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеСырьёBindingSource, "наименования", true));
             this.textBoxRawName.Location = new System.Drawing.Point(20, 32);
             this.textBoxRawName.Name = "textBoxRawName";
             this.textBoxRawName.Size = new System.Drawing.Size(157, 20);
@@ -984,7 +979,7 @@
             this.bindingNavigator13.MovePreviousItem = this.bindingNavigatorMovePreviousItem11;
             this.bindingNavigator13.Name = "bindingNavigator13";
             this.bindingNavigator13.PositionItem = this.bindingNavigatorPositionItem11;
-            this.bindingNavigator13.Size = new System.Drawing.Size(1112, 27);
+            this.bindingNavigator13.Size = new System.Drawing.Size(1110, 27);
             this.bindingNavigator13.TabIndex = 0;
             this.bindingNavigator13.Text = "bindingNavigator13";
             // 
