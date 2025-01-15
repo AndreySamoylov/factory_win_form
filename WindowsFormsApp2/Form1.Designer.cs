@@ -478,6 +478,8 @@
             this.представлениеОплатыTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеОплатыTableAdapter();
             this.представлениеСырьёTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеСырьёTableAdapter();
             this.представлениеВыпуск_ДеталейTableAdapter1 = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеВыпуск_ДеталейTableAdapter();
+            this.toolStripButtonOrderReport = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPaymentsReport = new System.Windows.Forms.ToolStripButton();
             tabControl7 = new System.Windows.Forms.TabControl();
             tabControl7.SuspendLayout();
             this.tabPage22.SuspendLayout();
@@ -4434,7 +4436,8 @@
             this.bindingNavigatorSeparator26,
             this.toolStripButtonOrdersAdd,
             this.toolStripButtonOrdersUpdate,
-            this.toolStripButtonOrdersDelete});
+            this.toolStripButtonOrdersDelete,
+            this.toolStripButtonOrderReport});
             this.bindingNavigator10.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator10.MoveFirstItem = this.bindingNavigatorMoveFirstItem8;
             this.bindingNavigator10.MoveLastItem = this.bindingNavigatorMoveLastItem8;
@@ -4659,7 +4662,8 @@
             this.bindingNavigatorSeparator29,
             this.toolStripButtonPaymentAdd,
             this.toolStripButtonPaymentUpdate,
-            this.toolStripButtonPaymentDelete});
+            this.toolStripButtonPaymentDelete,
+            this.toolStripButtonPaymentsReport});
             this.bindingNavigator11.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator11.MoveFirstItem = this.bindingNavigatorMoveFirstItem9;
             this.bindingNavigator11.MoveLastItem = this.bindingNavigatorMoveLastItem9;
@@ -4933,6 +4937,24 @@
             // представлениеВыпуск_ДеталейTableAdapter1
             // 
             this.представлениеВыпуск_ДеталейTableAdapter1.ClearBeforeFill = true;
+            // 
+            // toolStripButtonOrderReport
+            // 
+            this.toolStripButtonOrderReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOrderReport.Image")));
+            this.toolStripButtonOrderReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonOrderReport.Name = "toolStripButtonOrderReport";
+            this.toolStripButtonOrderReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonOrderReport.Text = "Отчёт";
+            this.toolStripButtonOrderReport.Click += new System.EventHandler(this.toolStripButtonOrderReport_Click);
+            // 
+            // toolStripButtonPaymentsReport
+            // 
+            this.toolStripButtonPaymentsReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPaymentsReport.Image")));
+            this.toolStripButtonPaymentsReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonPaymentsReport.Name = "toolStripButtonPaymentsReport";
+            this.toolStripButtonPaymentsReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonPaymentsReport.Text = "Отчёт";
+            this.toolStripButtonPaymentsReport.Click += new System.EventHandler(this.toolStripButtonPaymentsReport_Click);
             // 
             // Form1
             // 
@@ -5546,6 +5568,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton31;
         private System.Windows.Forms.DataGridViewTextBoxColumn наименованиеDataGridViewTextBoxColumn5;
         private System.Windows.Forms.ToolStripButton toolStripButton32;
+        private System.Windows.Forms.ToolStripButton toolStripButtonOrderReport;
+        private System.Windows.Forms.ToolStripButton toolStripButtonPaymentsReport;
     }
 }
 
