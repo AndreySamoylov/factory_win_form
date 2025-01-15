@@ -61,6 +61,7 @@
             this.toolStripButtonRawAccecingAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRawAccecingUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRawAccecingDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRawAccesingReport = new System.Windows.Forms.ToolStripButton();
             this.tabPage23 = new System.Windows.Forms.TabPage();
             this.dataGridView9 = new System.Windows.Forms.DataGridView();
             this.кодсырьяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +82,7 @@
             this.toolStripButtonRawAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRawUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRawDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonRawReport = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
@@ -422,6 +424,7 @@
             this.toolStripButtonOrdersAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOrdersUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonOrdersDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonOrderReport = new System.Windows.Forms.ToolStripButton();
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.dataGridView7 = new System.Windows.Forms.DataGridView();
             this.кодоплатыDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -445,6 +448,7 @@
             this.toolStripButtonPaymentAdd = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPaymentUpdate = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonPaymentDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButtonPaymentsReport = new System.Windows.Forms.ToolStripButton();
             this.tabPage21 = new System.Windows.Forms.TabPage();
             this.bindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.представлениеЖалобы_от_клиентовTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеЖалобы_от_клиентовTableAdapter();
@@ -478,8 +482,6 @@
             this.представлениеОплатыTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеОплатыTableAdapter();
             this.представлениеСырьёTableAdapter = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеСырьёTableAdapter();
             this.представлениеВыпуск_ДеталейTableAdapter1 = new WindowsFormsApp2.inform_system_baseDataSetTableAdapters.ПредставлениеВыпуск_ДеталейTableAdapter();
-            this.toolStripButtonOrderReport = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButtonPaymentsReport = new System.Windows.Forms.ToolStripButton();
             tabControl7 = new System.Windows.Forms.TabControl();
             tabControl7.SuspendLayout();
             this.tabPage22.SuspendLayout();
@@ -608,7 +610,7 @@
             this.tabPage22.Controls.Add(this.bindingNavigator12);
             this.tabPage22.Location = new System.Drawing.Point(4, 22);
             this.tabPage22.Name = "tabPage22";
-            this.tabPage22.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage22.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage22.Size = new System.Drawing.Size(1116, 393);
             this.tabPage22.TabIndex = 0;
             this.tabPage22.Text = "Приёмка сырья";
@@ -773,7 +775,8 @@
             this.bindingNavigatorSeparator32,
             this.toolStripButtonRawAccecingAdd,
             this.toolStripButtonRawAccecingUpdate,
-            this.toolStripButtonRawAccecingDelete});
+            this.toolStripButtonRawAccecingDelete,
+            this.toolStripButtonRawAccesingReport});
             this.bindingNavigator12.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator12.MoveFirstItem = this.bindingNavigatorMoveFirstItem10;
             this.bindingNavigator12.MoveLastItem = this.bindingNavigatorMoveLastItem10;
@@ -880,6 +883,15 @@
             this.toolStripButtonRawAccecingDelete.Text = "Удалить";
             this.toolStripButtonRawAccecingDelete.Click += new System.EventHandler(this.toolStripButtonRawAccecingDelete_Click);
             // 
+            // toolStripButtonRawAccesingReport
+            // 
+            this.toolStripButtonRawAccesingReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRawAccesingReport.Image")));
+            this.toolStripButtonRawAccesingReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRawAccesingReport.Name = "toolStripButtonRawAccesingReport";
+            this.toolStripButtonRawAccesingReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonRawAccesingReport.Text = "Отчёт";
+            this.toolStripButtonRawAccesingReport.Click += new System.EventHandler(this.toolStripButtonRawAccesingReport_Click);
+            // 
             // tabPage23
             // 
             this.tabPage23.Controls.Add(this.dataGridView9);
@@ -887,7 +899,7 @@
             this.tabPage23.Controls.Add(this.bindingNavigator13);
             this.tabPage23.Location = new System.Drawing.Point(4, 22);
             this.tabPage23.Name = "tabPage23";
-            this.tabPage23.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage23.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage23.Size = new System.Drawing.Size(1116, 393);
             this.tabPage23.TabIndex = 1;
             this.tabPage23.Text = "Сырьё";
@@ -971,7 +983,8 @@
             this.bindingNavigatorSeparator35,
             this.toolStripButtonRawAdd,
             this.toolStripButtonRawUpdate,
-            this.toolStripButtonRawDelete});
+            this.toolStripButtonRawDelete,
+            this.toolStripButtonRawReport});
             this.bindingNavigator13.Location = new System.Drawing.Point(3, 3);
             this.bindingNavigator13.MoveFirstItem = this.bindingNavigatorMoveFirstItem11;
             this.bindingNavigator13.MoveLastItem = this.bindingNavigatorMoveLastItem11;
@@ -1078,6 +1091,15 @@
             this.toolStripButtonRawDelete.Text = "Удалить";
             this.toolStripButtonRawDelete.Click += new System.EventHandler(this.toolStripButtonRawDelete_Click);
             // 
+            // toolStripButtonRawReport
+            // 
+            this.toolStripButtonRawReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonRawReport.Image")));
+            this.toolStripButtonRawReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonRawReport.Name = "toolStripButtonRawReport";
+            this.toolStripButtonRawReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonRawReport.Text = "Отчёт";
+            this.toolStripButtonRawReport.Click += new System.EventHandler(this.toolStripButtonRawReport_Click);
+            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -1090,7 +1112,7 @@
             this.tabControl1.Controls.Add(this.tabPage18);
             this.tabControl1.Controls.Add(this.tabPage21);
             this.tabControl1.Location = new System.Drawing.Point(10, 10);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1138, 451);
@@ -1101,9 +1123,9 @@
             this.tabPage1.AutoScroll = true;
             this.tabPage1.Controls.Add(this.tabControl3);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(1130, 425);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Администрация";
@@ -1115,7 +1137,7 @@
             this.tabControl3.Controls.Add(this.tabPage12);
             this.tabControl3.Controls.Add(this.tabPage13);
             this.tabControl3.Location = new System.Drawing.Point(4, 4);
-            this.tabControl3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl3.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl3.Name = "tabControl3";
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(938, 404);
@@ -1134,9 +1156,9 @@
             this.tabPage11.Controls.Add(this.label1);
             this.tabPage11.Controls.Add(this.представлениеЖалобы_от_клиентовDataGridView);
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
-            this.tabPage11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage11.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage11.Size = new System.Drawing.Size(930, 378);
             this.tabPage11.TabIndex = 0;
             this.tabPage11.Text = "Жалобы от клиентов";
@@ -1151,7 +1173,7 @@
             this.comboBoxContractorName.DisplayMember = "Наименование";
             this.comboBoxContractorName.FormattingEnabled = true;
             this.comboBoxContractorName.Location = new System.Drawing.Point(657, 75);
-            this.comboBoxContractorName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxContractorName.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxContractorName.Name = "comboBoxContractorName";
             this.comboBoxContractorName.Size = new System.Drawing.Size(233, 21);
             this.comboBoxContractorName.TabIndex = 17;
@@ -1182,7 +1204,7 @@
             // 
             this.textBoxComplaint.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЖалобы_от_клиентовBindingSource, "Текст_жалобы", true));
             this.textBoxComplaint.Location = new System.Drawing.Point(655, 187);
-            this.textBoxComplaint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxComplaint.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxComplaint.Multiline = true;
             this.textBoxComplaint.Name = "textBoxComplaint";
             this.textBoxComplaint.Size = new System.Drawing.Size(235, 80);
@@ -1343,7 +1365,7 @@
             this.dateTimePickerComplaint.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЖалобы_от_клиентовBindingSource, "Дата_жалобы", true));
             this.dateTimePickerComplaint.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.представлениеЖалобы_от_клиентовBindingSource, "Дата_жалобы", true));
             this.dateTimePickerComplaint.Location = new System.Drawing.Point(655, 149);
-            this.dateTimePickerComplaint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerComplaint.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerComplaint.Name = "dateTimePickerComplaint";
             this.dateTimePickerComplaint.Size = new System.Drawing.Size(235, 20);
             this.dateTimePickerComplaint.TabIndex = 12;
@@ -1364,7 +1386,7 @@
             this.checkBoxComplaintReviewed.AutoSize = true;
             this.checkBoxComplaintReviewed.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.представлениеЖалобы_от_клиентовBindingSource, "Жалоба_рассмотрена", true));
             this.checkBoxComplaintReviewed.Location = new System.Drawing.Point(754, 113);
-            this.checkBoxComplaintReviewed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxComplaintReviewed.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxComplaintReviewed.Name = "checkBoxComplaintReviewed";
             this.checkBoxComplaintReviewed.Size = new System.Drawing.Size(15, 14);
             this.checkBoxComplaintReviewed.TabIndex = 10;
@@ -1393,7 +1415,7 @@
             this.жалобарассмотренаDataGridViewCheckBoxColumn});
             this.представлениеЖалобы_от_клиентовDataGridView.DataSource = this.представлениеЖалобы_от_клиентовBindingSource;
             this.представлениеЖалобы_от_клиентовDataGridView.Location = new System.Drawing.Point(4, 37);
-            this.представлениеЖалобы_от_клиентовDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеЖалобы_от_клиентовDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеЖалобы_от_клиентовDataGridView.Name = "представлениеЖалобы_от_клиентовDataGridView";
             this.представлениеЖалобы_от_клиентовDataGridView.RowHeadersWidth = 51;
             this.представлениеЖалобы_от_клиентовDataGridView.RowTemplate.Height = 24;
@@ -1462,9 +1484,9 @@
             this.tabPage12.Controls.Add(this.textBox2);
             this.tabPage12.Controls.Add(this.представлениеДоговоры_с_контрагентамиDataGridView);
             this.tabPage12.Location = new System.Drawing.Point(4, 22);
-            this.tabPage12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage12.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage12.Size = new System.Drawing.Size(930, 378);
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Договоры с контрагентами";
@@ -1478,7 +1500,7 @@
             this.comboBox1.DisplayMember = "Наименование";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(645, 165);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(245, 21);
             this.comboBox1.TabIndex = 15;
@@ -1654,7 +1676,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.DataBindings.Add(new System.Windows.Forms.Binding("Checked", this.представлениеДоговоры_с_контрагентамиBindingSource, "Договор_подписан", true));
             this.checkBox2.Location = new System.Drawing.Point(756, 123);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 10;
@@ -1674,7 +1696,7 @@
             // 
             this.textBox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеДоговоры_с_контрагентамиBindingSource, "Номер_договора", true));
             this.textBox2.Location = new System.Drawing.Point(643, 74);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(247, 20);
             this.textBox2.TabIndex = 8;
@@ -1691,7 +1713,7 @@
             this.кодконтрагентаDataGridViewTextBoxColumn1});
             this.представлениеДоговоры_с_контрагентамиDataGridView.DataSource = this.представлениеДоговоры_с_контрагентамиBindingSource;
             this.представлениеДоговоры_с_контрагентамиDataGridView.Location = new System.Drawing.Point(4, 38);
-            this.представлениеДоговоры_с_контрагентамиDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеДоговоры_с_контрагентамиDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеДоговоры_с_контрагентамиDataGridView.Name = "представлениеДоговоры_с_контрагентамиDataGridView";
             this.представлениеДоговоры_с_контрагентамиDataGridView.RowHeadersWidth = 51;
             this.представлениеДоговоры_с_контрагентамиDataGridView.RowTemplate.Height = 24;
@@ -1752,7 +1774,7 @@
             this.tabPage13.Controls.Add(this.textBoxQuantityGoods);
             this.tabPage13.Controls.Add(this.представлениеОстатки_на_складахDataGridView);
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage13.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Size = new System.Drawing.Size(930, 378);
             this.tabPage13.TabIndex = 2;
@@ -1768,7 +1790,7 @@
             this.comboBoxProductName.DisplayMember = "Название";
             this.comboBoxProductName.FormattingEnabled = true;
             this.comboBoxProductName.Location = new System.Drawing.Point(563, 115);
-            this.comboBoxProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxProductName.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxProductName.Name = "comboBoxProductName";
             this.comboBoxProductName.Size = new System.Drawing.Size(212, 21);
             this.comboBoxProductName.TabIndex = 16;
@@ -1792,7 +1814,7 @@
             this.comboBoxWarehouseName.DisplayMember = "Наименование";
             this.comboBoxWarehouseName.FormattingEnabled = true;
             this.comboBoxWarehouseName.Location = new System.Drawing.Point(563, 63);
-            this.comboBoxWarehouseName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxWarehouseName.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxWarehouseName.Name = "comboBoxWarehouseName";
             this.comboBoxWarehouseName.Size = new System.Drawing.Size(212, 21);
             this.comboBoxWarehouseName.TabIndex = 15;
@@ -1978,7 +2000,7 @@
             // 
             this.textBoxQuantityGoods.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеОстатки_на_складахBindingSource, "Количество товара", true));
             this.textBoxQuantityGoods.Location = new System.Drawing.Point(563, 171);
-            this.textBoxQuantityGoods.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxQuantityGoods.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxQuantityGoods.Name = "textBoxQuantityGoods";
             this.textBoxQuantityGoods.Size = new System.Drawing.Size(212, 20);
             this.textBoxQuantityGoods.TabIndex = 10;
@@ -1996,7 +2018,7 @@
             this.кодDataGridViewTextBoxColumn2});
             this.представлениеОстатки_на_складахDataGridView.DataSource = this.представлениеОстатки_на_складахBindingSource;
             this.представлениеОстатки_на_складахDataGridView.Location = new System.Drawing.Point(2, 32);
-            this.представлениеОстатки_на_складахDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеОстатки_на_складахDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеОстатки_на_складахDataGridView.Name = "представлениеОстатки_на_складахDataGridView";
             this.представлениеОстатки_на_складахDataGridView.RowHeadersWidth = 51;
             this.представлениеОстатки_на_складахDataGridView.RowTemplate.Height = 24;
@@ -2060,9 +2082,9 @@
             this.tabPage2.AutoScroll = true;
             this.tabPage2.Controls.Add(this.tabControl4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1130, 425);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Отдел снабжения";
@@ -2073,7 +2095,7 @@
             this.tabControl4.Controls.Add(this.tabPage14);
             this.tabControl4.Controls.Add(this.tabPage15);
             this.tabControl4.Location = new System.Drawing.Point(4, 4);
-            this.tabControl4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl4.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl4.Name = "tabControl4";
             this.tabControl4.SelectedIndex = 0;
             this.tabControl4.Size = new System.Drawing.Size(971, 384);
@@ -2094,9 +2116,9 @@
             this.tabPage14.Controls.Add(this.bindingNavigator6);
             this.tabPage14.Controls.Add(this.представлениеКонтрагентыDataGridView);
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
-            this.tabPage14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage14.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage14.Size = new System.Drawing.Size(963, 358);
             this.tabPage14.TabIndex = 0;
             this.tabPage14.Text = "Контрагенты";
@@ -2156,7 +2178,7 @@
             // 
             this.textBox6.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеКонтрагентыBindingSource, "Адрес", true));
             this.textBox6.Location = new System.Drawing.Point(769, 204);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(162, 88);
@@ -2166,7 +2188,7 @@
             // 
             this.textBox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеКонтрагентыBindingSource, "Телефон", true));
             this.textBox5.Location = new System.Drawing.Point(769, 164);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(162, 20);
             this.textBox5.TabIndex = 8;
@@ -2175,7 +2197,7 @@
             // 
             this.textBox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеКонтрагентыBindingSource, "Email", true));
             this.textBox4.Location = new System.Drawing.Point(769, 123);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(162, 20);
             this.textBox4.TabIndex = 7;
@@ -2184,7 +2206,7 @@
             // 
             this.textBox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеКонтрагентыBindingSource, "ИНН", true));
             this.textBox3.Location = new System.Drawing.Point(769, 86);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(162, 20);
             this.textBox3.TabIndex = 6;
@@ -2193,7 +2215,7 @@
             // 
             this.textBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеКонтрагентыBindingSource, "Наименование", true));
             this.textBox1.Location = new System.Drawing.Point(769, 50);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(162, 20);
             this.textBox1.TabIndex = 5;
@@ -2351,7 +2373,7 @@
             this.адресDataGridViewTextBoxColumn});
             this.представлениеКонтрагентыDataGridView.DataSource = this.представлениеКонтрагентыBindingSource;
             this.представлениеКонтрагентыDataGridView.Location = new System.Drawing.Point(4, 43);
-            this.представлениеКонтрагентыDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеКонтрагентыDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеКонтрагентыDataGridView.Name = "представлениеКонтрагентыDataGridView";
             this.представлениеКонтрагентыDataGridView.RowHeadersWidth = 51;
             this.представлениеКонтрагентыDataGridView.RowTemplate.Height = 24;
@@ -2424,9 +2446,9 @@
             this.tabPage15.Controls.Add(this.label25);
             this.tabPage15.Controls.Add(this.представлениеЗакупкиDataGridView);
             this.tabPage15.Location = new System.Drawing.Point(4, 22);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage15.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage15.Size = new System.Drawing.Size(963, 358);
             this.tabPage15.TabIndex = 1;
             this.tabPage15.Text = "Закупки";
@@ -2437,7 +2459,7 @@
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
             this.dateTimePicker1.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.представлениеЗакупкиBindingSource, "Дата_закупки", true));
             this.dateTimePicker1.Location = new System.Drawing.Point(730, 196);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(143, 20);
             this.dateTimePicker1.TabIndex = 17;
@@ -2455,7 +2477,7 @@
             this.comboBoxname_product.DisplayMember = "Название";
             this.comboBoxname_product.FormattingEnabled = true;
             this.comboBoxname_product.Location = new System.Drawing.Point(730, 84);
-            this.comboBoxname_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxname_product.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxname_product.Name = "comboBoxname_product";
             this.comboBoxname_product.Size = new System.Drawing.Size(143, 21);
             this.comboBoxname_product.TabIndex = 16;
@@ -2469,7 +2491,7 @@
             this.comboBoxname_contractor.DisplayMember = "Наименование";
             this.comboBoxname_contractor.FormattingEnabled = true;
             this.comboBoxname_contractor.Location = new System.Drawing.Point(730, 47);
-            this.comboBoxname_contractor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxname_contractor.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxname_contractor.Name = "comboBoxname_contractor";
             this.comboBoxname_contractor.Size = new System.Drawing.Size(143, 21);
             this.comboBoxname_contractor.TabIndex = 15;
@@ -2489,7 +2511,7 @@
             // 
             this.textBox10.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Цена", true));
             this.textBox10.Location = new System.Drawing.Point(730, 159);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox10.Margin = new System.Windows.Forms.Padding(2);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(143, 20);
             this.textBox10.TabIndex = 12;
@@ -2508,7 +2530,7 @@
             // 
             this.textBox9.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.представлениеЗакупкиBindingSource, "Количество", true));
             this.textBox9.Location = new System.Drawing.Point(730, 122);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(2);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(143, 20);
             this.textBox9.TabIndex = 10;
@@ -2699,7 +2721,7 @@
             this.датазакупкиDataGridViewTextBoxColumn});
             this.представлениеЗакупкиDataGridView.DataSource = this.представлениеЗакупкиBindingSource;
             this.представлениеЗакупкиDataGridView.Location = new System.Drawing.Point(4, 30);
-            this.представлениеЗакупкиDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеЗакупкиDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеЗакупкиDataGridView.Name = "представлениеЗакупкиDataGridView";
             this.представлениеЗакупкиDataGridView.RowHeadersWidth = 51;
             this.представлениеЗакупкиDataGridView.RowTemplate.Height = 24;
@@ -2789,7 +2811,7 @@
             this.tabPage3.Controls.Add(this.представлениеТоварыDataGridView);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1130, 425);
             this.tabPage3.TabIndex = 2;
@@ -2805,7 +2827,7 @@
             this.dataGridViewTextBoxColumn8});
             this.представлениеТоварыDataGridView.DataSource = this.представлениеТоварыBindingSource;
             this.представлениеТоварыDataGridView.Location = new System.Drawing.Point(2, 16);
-            this.представлениеТоварыDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеТоварыDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеТоварыDataGridView.Name = "представлениеТоварыDataGridView";
             this.представлениеТоварыDataGridView.RowHeadersWidth = 51;
             this.представлениеТоварыDataGridView.RowTemplate.Height = 24;
@@ -2841,7 +2863,7 @@
             // tabPage4
             // 
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1130, 425);
             this.tabPage4.TabIndex = 3;
@@ -2856,7 +2878,7 @@
             this.tabPage5.Controls.Add(this.представлениеСкладыDataGridView);
             this.tabPage5.Controls.Add(this.label8);
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1130, 425);
             this.tabPage5.TabIndex = 4;
@@ -2884,7 +2906,7 @@
             this.dataGridViewTextBoxColumn22});
             this.представлениеПриемкаСырьяDataGridView.DataSource = this.представлениеПриемкаСырьяBindingSource;
             this.представлениеПриемкаСырьяDataGridView.Location = new System.Drawing.Point(5, 257);
-            this.представлениеПриемкаСырьяDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеПриемкаСырьяDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеПриемкаСырьяDataGridView.Name = "представлениеПриемкаСырьяDataGridView";
             this.представлениеПриемкаСырьяDataGridView.RowHeadersWidth = 51;
             this.представлениеПриемкаСырьяDataGridView.RowTemplate.Height = 24;
@@ -2932,7 +2954,7 @@
             this.dataGridViewTextBoxColumn4});
             this.представлениеСкладыDataGridView.DataSource = this.представлениеСкладыBindingSource;
             this.представлениеСкладыDataGridView.Location = new System.Drawing.Point(5, 20);
-            this.представлениеСкладыDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.представлениеСкладыDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.представлениеСкладыDataGridView.Name = "представлениеСкладыDataGridView";
             this.представлениеСкладыDataGridView.RowHeadersWidth = 51;
             this.представлениеСкладыDataGridView.RowTemplate.Height = 24;
@@ -2971,7 +2993,7 @@
             this.tabPage6.AutoScroll = true;
             this.tabPage6.Controls.Add(this.tabControl5);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1130, 425);
             this.tabPage6.TabIndex = 5;
@@ -2996,7 +3018,7 @@
             this.tabPage16.Controls.Add(this.bindingNavigator8);
             this.tabPage16.Location = new System.Drawing.Point(4, 22);
             this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage16.Size = new System.Drawing.Size(1122, 399);
             this.tabPage16.TabIndex = 0;
             this.tabPage16.Text = "Выпуск деталей";
@@ -3261,7 +3283,7 @@
             this.tabPage17.Controls.Add(this.bindingNavigator9);
             this.tabPage17.Location = new System.Drawing.Point(4, 22);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage17.Size = new System.Drawing.Size(1122, 399);
             this.tabPage17.TabIndex = 1;
             this.tabPage17.Text = "Все детали";
@@ -3461,7 +3483,7 @@
             this.tabPage7.Controls.Add(this.tabControl2);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage7.Size = new System.Drawing.Size(1130, 425);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "Библиотека";
@@ -3486,7 +3508,7 @@
             this.tabPage8.Controls.Add(this.bindingNavigatorLibraryBook);
             this.tabPage8.Location = new System.Drawing.Point(4, 22);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage8.Size = new System.Drawing.Size(1116, 393);
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Книги";
@@ -3840,8 +3862,8 @@
             this.tabPage9.Controls.Add(this.bindingNavigator1);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage9.Size = new System.Drawing.Size(1118, 395);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1116, 393);
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Места хранения";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -3858,7 +3880,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(203, 30);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(912, 362);
+            this.dataGridView2.Size = new System.Drawing.Size(910, 360);
             this.dataGridView2.TabIndex = 2;
             // 
             // кодместахраненияDataGridViewTextBoxColumn
@@ -3885,7 +3907,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(3, 30);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 362);
+            this.panel2.Size = new System.Drawing.Size(200, 360);
             this.panel2.TabIndex = 1;
             // 
             // textBox_book_storage
@@ -3923,7 +3945,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1112, 27);
+            this.bindingNavigator1.Size = new System.Drawing.Size(1110, 27);
             this.bindingNavigator1.TabIndex = 0;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -4029,8 +4051,8 @@
             this.tabPage10.Controls.Add(this.bindingNavigator2);
             this.tabPage10.Location = new System.Drawing.Point(4, 22);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPage10.Size = new System.Drawing.Size(1118, 395);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(1116, 393);
             this.tabPage10.TabIndex = 2;
             this.tabPage10.Text = "Типы книг";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -4047,7 +4069,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(203, 30);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.Size = new System.Drawing.Size(912, 362);
+            this.dataGridView3.Size = new System.Drawing.Size(910, 360);
             this.dataGridView3.TabIndex = 2;
             // 
             // кодтипакнигDataGridViewTextBoxColumn
@@ -4074,7 +4096,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(3, 30);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 362);
+            this.panel3.Size = new System.Drawing.Size(200, 360);
             this.panel3.TabIndex = 1;
             // 
             // textBox_book_type
@@ -4112,7 +4134,7 @@
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem2;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem2;
-            this.bindingNavigator2.Size = new System.Drawing.Size(1112, 27);
+            this.bindingNavigator2.Size = new System.Drawing.Size(1110, 27);
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -4216,7 +4238,7 @@
             this.tabPage18.Controls.Add(this.tabControl6);
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage18.Size = new System.Drawing.Size(1130, 425);
             this.tabPage18.TabIndex = 7;
             this.tabPage18.Text = "Отдел сбыта";
@@ -4240,7 +4262,7 @@
             this.tabPage19.Controls.Add(this.bindingNavigator10);
             this.tabPage19.Location = new System.Drawing.Point(4, 22);
             this.tabPage19.Name = "tabPage19";
-            this.tabPage19.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage19.Size = new System.Drawing.Size(1116, 393);
             this.tabPage19.TabIndex = 0;
             this.tabPage19.Text = "Заказы";
@@ -4539,6 +4561,15 @@
             this.toolStripButtonOrdersDelete.Text = "Удалить";
             this.toolStripButtonOrdersDelete.Click += new System.EventHandler(this.toolStripButtonOrdersDelete_Click);
             // 
+            // toolStripButtonOrderReport
+            // 
+            this.toolStripButtonOrderReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOrderReport.Image")));
+            this.toolStripButtonOrderReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonOrderReport.Name = "toolStripButtonOrderReport";
+            this.toolStripButtonOrderReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonOrderReport.Text = "Отчёт";
+            this.toolStripButtonOrderReport.Click += new System.EventHandler(this.toolStripButtonOrderReport_Click);
+            // 
             // tabPage20
             // 
             this.tabPage20.Controls.Add(this.dataGridView7);
@@ -4546,7 +4577,7 @@
             this.tabPage20.Controls.Add(this.bindingNavigator11);
             this.tabPage20.Location = new System.Drawing.Point(4, 22);
             this.tabPage20.Name = "tabPage20";
-            this.tabPage20.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage20.Size = new System.Drawing.Size(1116, 393);
             this.tabPage20.TabIndex = 1;
             this.tabPage20.Text = "Оплата";
@@ -4765,12 +4796,21 @@
             this.toolStripButtonPaymentDelete.Text = "Удалить";
             this.toolStripButtonPaymentDelete.Click += new System.EventHandler(this.toolStripButtonPaymentDelete_Click);
             // 
+            // toolStripButtonPaymentsReport
+            // 
+            this.toolStripButtonPaymentsReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPaymentsReport.Image")));
+            this.toolStripButtonPaymentsReport.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButtonPaymentsReport.Name = "toolStripButtonPaymentsReport";
+            this.toolStripButtonPaymentsReport.Size = new System.Drawing.Size(63, 24);
+            this.toolStripButtonPaymentsReport.Text = "Отчёт";
+            this.toolStripButtonPaymentsReport.Click += new System.EventHandler(this.toolStripButtonPaymentsReport_Click);
+            // 
             // tabPage21
             // 
             this.tabPage21.Controls.Add(tabControl7);
             this.tabPage21.Location = new System.Drawing.Point(4, 22);
             this.tabPage21.Name = "tabPage21";
-            this.tabPage21.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage21.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage21.Size = new System.Drawing.Size(1130, 425);
             this.tabPage21.TabIndex = 8;
             this.tabPage21.Text = "Производственная бухгалтерия";
@@ -4933,31 +4973,13 @@
             // 
             this.представлениеВыпуск_ДеталейTableAdapter1.ClearBeforeFill = true;
             // 
-            // toolStripButtonOrderReport
-            // 
-            this.toolStripButtonOrderReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonOrderReport.Image")));
-            this.toolStripButtonOrderReport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonOrderReport.Name = "toolStripButtonOrderReport";
-            this.toolStripButtonOrderReport.Size = new System.Drawing.Size(63, 24);
-            this.toolStripButtonOrderReport.Text = "Отчёт";
-            this.toolStripButtonOrderReport.Click += new System.EventHandler(this.toolStripButtonOrderReport_Click);
-            // 
-            // toolStripButtonPaymentsReport
-            // 
-            this.toolStripButtonPaymentsReport.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPaymentsReport.Image")));
-            this.toolStripButtonPaymentsReport.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButtonPaymentsReport.Name = "toolStripButtonPaymentsReport";
-            this.toolStripButtonPaymentsReport.Size = new System.Drawing.Size(63, 24);
-            this.toolStripButtonPaymentsReport.Text = "Отчёт";
-            this.toolStripButtonPaymentsReport.Click += new System.EventHandler(this.toolStripButtonPaymentsReport_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1028, 425);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Автомобильный завод";
@@ -5565,6 +5587,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton32;
         private System.Windows.Forms.ToolStripButton toolStripButtonOrderReport;
         private System.Windows.Forms.ToolStripButton toolStripButtonPaymentsReport;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRawAccesingReport;
+        private System.Windows.Forms.ToolStripButton toolStripButtonRawReport;
     }
 }
 

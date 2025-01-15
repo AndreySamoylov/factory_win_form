@@ -1856,5 +1856,167 @@ namespace WindowsFormsApp2
                 }
             }
         }
+
+        private void toolStripButtonRawAccesingReport_Click(object sender, EventArgs e)
+        {
+            // Функциональность создания отчета по деталям
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет по приёмкам сырья";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем данные из TableAdapter
+
+                var dataTable = inform_system_baseDataSet.ПредставлениеПриемкаСырья;
+
+                // Проверка: если таблица пуста
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для отображения в отчете.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, dataTable.Rows.Count + 1, dataTable.Columns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < dataTable.Columns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = dataTable.Columns[i].ColumnName;
+                    wordTable.Cell(1, i + 1).Range.Font.Bold = 1; // Сделать заголовки жирными
+                }
+
+                // Добавление данных в таблицу
+                for (int rowIndex = 0; rowIndex < dataTable.Rows.Count; rowIndex++)
+                {
+                    for (int colIndex = 0; colIndex < dataTable.Columns.Count; colIndex++)
+                    {
+                        var cellValue = dataTable.Rows[rowIndex][colIndex];
+                        wordTable.Cell(rowIndex + 2, colIndex + 1).Range.Text = cellValue?.ToString() ?? "";
+                    }
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_по_приёмкам сырья"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                if (wordDoc != null)
+                {
+                    wordDoc.Close(false);
+                    Marshal.ReleaseComObject(wordDoc); // Освобождаем объект документа
+                }
+
+                if (wordApp != null)
+                {
+                    wordApp.Quit();
+                    Marshal.ReleaseComObject(wordApp); // Освобождаем объект приложения
+                }
+            }
+        }
+
+        private void toolStripButtonRawReport_Click(object sender, EventArgs e)
+        {
+            // Функциональность создания отчета по деталям
+            // Создаем объект Word.Application
+            Word.Application wordApp = new Word.Application();
+            Word.Document wordDoc = wordApp.Documents.Add();
+            try
+            {
+                // Добавление заголовка в документ
+                Word.Paragraph paragraph = wordDoc.Content.Paragraphs.Add();
+                paragraph.Range.Text = "Отчет по сырью";
+                paragraph.Range.Font.Bold = 1;
+                paragraph.Format.SpaceAfter = 10;
+                paragraph.Range.InsertParagraphAfter();
+
+                // Получаем данные из TableAdapter
+
+                var dataTable = inform_system_baseDataSet.ПредставлениеСырьё;
+
+                // Проверка: если таблица пуста
+                if (dataTable.Rows.Count == 0)
+                {
+                    MessageBox.Show("Нет данных для отображения в отчете.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Создание таблицы в Word
+                Word.Table wordTable = wordDoc.Tables.Add(paragraph.Range, dataTable.Rows.Count + 1, dataTable.Columns.Count);
+                wordTable.Borders.Enable = 1;
+
+                // Добавление заголовков таблицы
+                for (int i = 0; i < dataTable.Columns.Count; i++)
+                {
+                    wordTable.Cell(1, i + 1).Range.Text = dataTable.Columns[i].ColumnName;
+                    wordTable.Cell(1, i + 1).Range.Font.Bold = 1; // Сделать заголовки жирными
+                }
+
+                // Добавление данных в таблицу
+                for (int rowIndex = 0; rowIndex < dataTable.Rows.Count; rowIndex++)
+                {
+                    for (int colIndex = 0; colIndex < dataTable.Columns.Count; colIndex++)
+                    {
+                        var cellValue = dataTable.Rows[rowIndex][colIndex];
+                        wordTable.Cell(rowIndex + 2, colIndex + 1).Range.Text = cellValue?.ToString() ?? "";
+                    }
+                }
+
+                // Сохранение документа
+                SaveFileDialog saveFileDialog = new SaveFileDialog
+                {
+                    Filter = "Word Document (*.docx)|*.docx",
+                    FileName = "Отчет_по_сырью"
+                };
+
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    wordDoc.SaveAs2(saveFileDialog.FileName);
+                    MessageBox.Show("Отчет успешно сохранен!", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при экспорте в Word: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Закрываем Word
+                if (wordDoc != null)
+                {
+                    wordDoc.Close(false);
+                    Marshal.ReleaseComObject(wordDoc); // Освобождаем объект документа
+                }
+
+                if (wordApp != null)
+                {
+                    wordApp.Quit();
+                    Marshal.ReleaseComObject(wordApp); // Освобождаем объект приложения
+                }
+            }
+        }
     }
 }
