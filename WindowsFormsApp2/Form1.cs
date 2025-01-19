@@ -26,6 +26,18 @@ namespace WindowsFormsApp2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеВыпуск_двигателей". При необходимости она может быть перемещена или удалена.
+            this.представлениеВыпуск_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_двигателей);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet2.ПредставлениеДетали_цех_двигателей". При необходимости она может быть перемещена или удалена.
+            this.представлениеДетали_цех_двигателейTableAdapter.Fill(this.inform_system_baseDataSet2.ПредставлениеДетали_цех_двигателей);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеРасчетные_ведомости". При необходимости она может быть перемещена или удалена.
+            this.представлениеРасчетные_ведомостиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеРасчетные_ведомости);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеДолжности". При необходимости она может быть перемещена или удалена.
+            //this.представлениеДолжностиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДолжности);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеОтделы". При необходимости она может быть перемещена или удалена.
+            this.представлениеОтделыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОтделы);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСотрудники". При необходимости она может быть перемещена или удалена.
+            this.представлениеСотрудникиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСотрудники);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеСырьё". При необходимости она может быть перемещена или удалена.
             this.представлениеСырьёTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСырьё);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "inform_system_baseDataSet.ПредставлениеОплаты". При необходимости она может быть перемещена или удалена.
@@ -2016,6 +2028,235 @@ namespace WindowsFormsApp2
                     wordApp.Quit();
                     Marshal.ReleaseComObject(wordApp); // Освобождаем объект приложения
                 }
+            }
+        }
+
+        // Кнопка добавить. Расчетная ведомость
+        private void toolStripButton41_Click(object sender, EventArgs e)
+        {
+            DateTime date = Convert.ToDateTime(this.dateTimePicker2.Text);
+
+            System.Data.DataRowView staff = (System.Data.DataRowView)this.comboBoxStaff.SelectedValue;
+            Int32 id_staff = Convert.ToInt32(staff.Row[0]);
+
+            Int32 hour = Convert.ToInt32(this.textBoxOtrHour.Text);
+
+            Int32 payment = Convert.ToInt32(this.textBoxPayroll.Text);
+
+            queriesTableAdapter.CreatePayroll(date, id_staff, hour, payment);
+       
+            this.представлениеРасчетные_ведомостиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеРасчетные_ведомости);
+        }
+
+        // Кнопка изменить. Расчетная ведомость
+        private void toolStripButton42_Click(object sender, EventArgs e)
+        {
+            DateTime date = Convert.ToDateTime(this.dateTimePicker2.Text);
+
+            System.Data.DataRowView staff = (System.Data.DataRowView)this.comboBoxStaff.SelectedValue;
+            Int32 id_staff = Convert.ToInt32(staff.Row[0]);
+
+            Int32 hour = Convert.ToInt32(this.textBoxOtrHour.Text);
+
+            Int32 payment = Convert.ToInt32(this.textBoxPayroll.Text);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеРасчетныеведомостиBindingSource.Current;
+            id = (int)drv["Код"];
+            queriesTableAdapter.UpdatePayroll(id, date, id_staff, hour, payment);
+
+            this.представлениеРасчетные_ведомостиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеРасчетные_ведомости);
+        }
+
+        // Кнопка удалить. Расчетная ведомость
+        private void toolStripButton43_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеРасчетныеведомостиBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеОплатыBindingSource.Current;
+                int id = (int)drv["Код"];
+                queriesTableAdapter.DeletePayroll(id);
+                this.представлениеРасчетные_ведомостиTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеРасчетные_ведомости);
+            }
+        }
+
+        // Добавить. Выпуск двигателей
+        private void toolStripButton55_Click(object sender, EventArgs e)
+        {
+            DateTime date = Convert.ToDateTime(this.dateTimePickerEngine.Text);
+
+            String name = this.textBoxEngineTitle.Text;
+
+            queriesTableAdapter.CreateEngine(name, date);
+
+            this.представлениеВыпуск_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_двигателей);
+        }
+
+        // Изменить. Выпуск двигателей
+        private void toolStripButton56_Click(object sender, EventArgs e)
+        {
+            DateTime date = Convert.ToDateTime(this.dateTimePickerEngine.Text);
+
+            String name = this.textBoxEngineTitle.Text;
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеВыпускдвигателейBindingSource.Current;
+            id = (int)drv["код"];
+            queriesTableAdapter.UpdateEngine(id, name, date);
+
+            this.представлениеВыпуск_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_двигателей);
+        }
+
+        // Удалить. Выпуск двигателей
+        private void toolStripButton57_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеВыпускдвигателейBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеВыпускдвигателейBindingSource.Current;
+                int id = (int)drv["код"];
+                queriesTableAdapter.DeleteEngine(id);
+                this.представлениеВыпуск_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеВыпуск_двигателей);
+            }
+        }
+
+        // Добавить. Выпуск деталей двигателя
+        private void toolStripButton62_Click(object sender, EventArgs e)
+        {
+            
+            String name = this.textBoxEngineDetailTitle.Text;
+
+            System.Data.DataRowView engine = (System.Data.DataRowView)this.comboBoxEngineDitailEngine.SelectedValue;
+            Int32 id_engine = Convert.ToInt32(engine.Row[0]);
+
+            queriesTableAdapter.CreateEngineDetail(name, id_engine);
+
+            this.представлениеДетали_цех_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДетали_цех_двигателей);
+            
+        }
+
+        // Изменить. Выпуск деталей двигателя
+        private void toolStripButton63_Click(object sender, EventArgs e)
+        {
+            
+            String name = this.textBoxEngineDetailTitle.Text;
+
+            System.Data.DataRowView engine = (System.Data.DataRowView)this.comboBoxEngineDitailEngine.SelectedValue;
+            Int32 id_engine = Convert.ToInt32(engine.Row[0]);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеДеталицехдвигателейBindingSource.Current;
+            id = (int)drv["код"];
+            queriesTableAdapter.UpdateEngineDetail(id, name, id_engine);
+
+            this.представлениеДетали_цех_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДетали_цех_двигателей);
+        }
+
+        // Удалить. Выпуск деталей двигателя
+        private void toolStripButton64_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеДеталицехдвигателейBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеДеталицехдвигателейBindingSource.Current;
+                int id = (int)drv["код"];
+                queriesTableAdapter.DeleteEngineDetail(id);
+                this.представлениеДетали_цех_двигателейTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеДетали_цех_двигателей);
+            }
+        }
+
+        // Добавить. Остатки на складах
+        private void toolStripButton83_Click_1(object sender, EventArgs e)
+        {
+                      
+            System.Data.DataRowView SorageName = (System.Data.DataRowView)this.comboBoxSorageName.SelectedItem;
+            Int32 id_SorageName = Convert.ToInt32(SorageName.Row[0]);
+                
+            System.Data.DataRowView prodname = (System.Data.DataRowView)this.comboBoxProductName.SelectedItem;
+            Int32 id_prodname = Convert.ToInt32(prodname.Row[0]);
+
+            Int32 prodcount = Convert.ToInt32(this.textBoxProdCount.Text);
+
+            queriesTableAdapter.CreateQuantity(id_SorageName, id_prodname, prodcount);
+
+            this.представлениеОстатки_на_складахTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОстатки_на_складах);
+        }
+        // Изменить. Остатки на складах
+        private void toolStripButton84_Click(object sender, EventArgs e)
+        {
+            System.Data.DataRowView SorageName = (System.Data.DataRowView)this.comboBoxSorageName.SelectedItem;
+            Int32 id_SorageName = Convert.ToInt32(SorageName.Row[0]);
+
+            System.Data.DataRowView prodname = (System.Data.DataRowView)this.comboBoxProductName.SelectedItem;
+            Int32 id_prodname = Convert.ToInt32(prodname.Row[0]);
+
+            Int32 prodcount = Convert.ToInt32(this.textBoxProdCount.Text);
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеОстатки_на_складахBindingSource.Current;
+            id = (int)drv["Код"];
+
+            queriesTableAdapter.UpdateQuantity(id, id_SorageName, id_prodname, prodcount);
+
+            this.представлениеОстатки_на_складахTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОстатки_на_складах);
+        }
+        // Удалить. Остатки на складах
+        private void toolStripButton85_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеОстатки_на_складахBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеОстатки_на_складахBindingSource.Current;
+                int id = (int)drv["Код"];
+                queriesTableAdapter.DeleteQuantity(id);
+                this.представлениеОстатки_на_складахTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеОстатки_на_складах);
+            }
+
+        }
+        // Добавить. Склады
+        private void toolStripButton76_Click(object sender, EventArgs e)
+        {
+   
+            String name = this.textBoxWarehouseName.Text;
+
+            queriesTableAdapter.CreateWarehouse(name);
+
+            this.представлениеСкладыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСклады);
+        }
+        // Изменить. Склады
+        private void toolStripButton77_Click(object sender, EventArgs e)
+        {
+            String name = this.textBoxWarehouseName.Text;
+
+            int id = 0;
+            DataRowView drv;
+            drv = (DataRowView)представлениеСкладыBindingSource.Current;
+            id = (int)drv["Код"];
+
+            queriesTableAdapter.UpdateWarehouse(id, name);
+
+            this.представлениеСкладыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСклады);
+        }
+        // Удалить. Склады
+        private void toolStripButton78_Click(object sender, EventArgs e)
+        {
+            DataRowView drv;
+            int i = представлениеСкладыBindingSource.Count;
+            if (i > 0)
+            {
+                drv = (DataRowView)представлениеСкладыBindingSource.Current;
+                int id = (int)drv["Код"];
+                queriesTableAdapter.DeleteWarehouse(id);
+                this.представлениеСкладыTableAdapter.Fill(this.inform_system_baseDataSet.ПредставлениеСклады);
             }
         }
     }

@@ -90,6 +90,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="inform_system_baseDataSet.cs">
+      <DependentUpon>inform_system_baseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="inform_system_baseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
